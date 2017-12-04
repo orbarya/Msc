@@ -3,6 +3,7 @@ from scipy.signal import convolve2d
 from scipy.misc import imread as imread
 from skimage.color import rgb2gray
 import matplotlib.pyplot as plt
+from sol1 import *
 
 k = 256
 
@@ -188,3 +189,8 @@ def find_kernel_indices(m, n, kernel_size):
     col_start = c_n - k
     col_end = (c_n + k + 1).astype(np.uint)
     return row_start, row_end, col_start, col_end
+
+im = imread ('./monkey.jpg', 1)
+der = conv_der(im)
+imshow (der, 1)
+plt.show()
