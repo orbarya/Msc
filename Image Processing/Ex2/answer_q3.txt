@@ -1,0 +1,1 @@
+The difference between the blur algorithms is with the handling of the borders. When using the Fourier blur the image is considered as tiled infinite times, when using convolution it depends on the chosen solution for borders. In my solution the convolve2d function handles the borders by padding with zeroes. 

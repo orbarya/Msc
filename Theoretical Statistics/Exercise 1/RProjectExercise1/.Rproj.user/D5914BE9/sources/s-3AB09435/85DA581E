@@ -1,0 +1,23 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1508859232792.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "85DA581E",
+    "lastKnownWriteTime" : 1508860119,
+    "last_content_update" : 1508860119198,
+    "path" : "~/Msc/Theoretical Statistics/Exercise 1/RProjectExercise1/Question1.R",
+    "project_path" : "Question1.R",
+    "properties" : {
+        "cursorPosition" : "6,0",
+        "scrollLine" : "0",
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
