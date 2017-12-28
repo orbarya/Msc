@@ -1,0 +1,1244 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Enumerate
+Let G = ([n], E) be a k-regular graph on n vertices.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula $A_{i,j}=A_{ji}\Rightarrow A\in S_{m}(\Re)$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Enumerate
+Let 
+\begin_inset Formula $v$
+\end_inset
+
+ be an eigenvector of 
+\begin_inset Formula $A$
+\end_inset
+
+ corrosponding to eigenvalue 
+\begin_inset Formula $\lambda$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Let's assume 
+\begin_inset Formula $i\in[n]$
+\end_inset
+
+ s.t.
+ 
+\begin_inset Formula $|v_{i}|$
+\end_inset
+
+ is maximal.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+Av=\lambda v
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+On the one hand
+\begin_inset Formula 
+\[
+[Av]_{i}=\sum_{k=1}^{n}[A]_{i,k}v_{k}\leq\sum_{k=1}^{n}[A]_{i,k}|v_{i}|=|v_{i}|\sum_{k=1}^{n}[A]_{i,k}=k|v_{i}|
+\]
+
+\end_inset
+
+And on the other hand
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+[Av]_{i}=\lambda v{}_{i}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Therefore, any such eigenvector satisfies 
+\begin_inset Formula 
+\[
+\lambda v_{i}\leq k|v_{i}|
+\]
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+if 
+\begin_inset Formula $v_{i}>0\Rightarrow\lambda\leq k$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+if 
+\begin_inset Formula $v_{i}<0$
+\end_inset
+
+ then let's consider the vector 
+\begin_inset Formula $-v$
+\end_inset
+
+ which satisfies 
+\begin_inset Formula 
+\[
+A(-v)=(-\lambda)v.
+\]
+
+\end_inset
+
+ For 
+\begin_inset Formula $-v$
+\end_inset
+
+ it still holds that 
+\begin_inset Formula $|v_{i}|$
+\end_inset
+
+ is maximal and so from the above equations we get
+\begin_inset Formula 
+\[
+-\lambda v_{i}\leq k|v_{i}|\Rightarrow\lambda\geq-k
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+so we conclude 
+\begin_inset Formula 
+\[
+|\lambda|\leq k
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Let's take the vector 
+\begin_inset Formula $v$
+\end_inset
+
+ where 
+\begin_inset Formula $\forall i\in[n]\,,\,v_{i}=1$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula 
+\[
+[Av]_{i}=\sum_{j=1}^{n}A_{ij}v_{j}=\sum_{j=1}^{n}A_{ij}=k\Rightarrow Av=kv
+\]
+
+\end_inset
+
+We have shown some eigenvalue 
+\begin_inset Formula $\lambda=k$
+\end_inset
+
+.
+ Since 
+\begin_inset Formula $\lambda_{1}\geq\lambda_{2}\geq\ldots\geq\lambda_{n}$
+\end_inset
+
+ and 
+\begin_inset Formula $|\lambda|\leq k$
+\end_inset
+
+ we can conclude that
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\lambda_{1}=k
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Lemma: Let G be a graph with a connected component 
+\begin_inset Formula $C$
+\end_inset
+
+ and let v be the component's indicator vector, meaning:
+\begin_inset Formula 
+\[
+v_{i}=\begin{cases}
+1 & i\in V(C)\\
+0 & otherwise
+\end{cases}
+\]
+
+\end_inset
+
+then 
+\begin_inset Formula 
+\[
+Av=kv
+\]
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Proof: 
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+if 
+\begin_inset Formula $a\in V(C)$
+\end_inset
+
+ since a has k neighbors and they're all in C it follows that:
+\begin_inset Formula 
+\[
+[Av]_{a}=\sum_{j=1}^{n}A_{kj}v_{j}=k
+\]
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+if 
+\begin_inset Formula $a\notin V(C)$
+\end_inset
+
+then non of a's neighbors are in C and it follows that:
+\begin_inset Formula 
+\[
+[Av]_{a}=\sum_{j=1}^{n}A_{kj}v_{j}=0
+\]
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Therefore
+\begin_inset Formula 
+\[
+Av=kv
+\]
+
+\end_inset
+
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+v_{!,}
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+
+\begin_inset Newline newline
+\end_inset
+
+Let's suppose that G has m connected components, 
+\begin_inset Formula $C_{1},\dots C_{m}$
+\end_inset
+
+, the indicator vectors for these components ,
+\begin_inset Formula $v_{1},\dots,v_{m}$
+\end_inset
+
+, are orthogonal since they do not share any indices, and so there are at
+ least m orthogonal eigenvectors corrosponding to eigenvalue k, meaning
+ the geometric multiplicity of k is 
+\begin_inset Formula $\geq m$
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+For any real symmetric matrix the algebraic multiplicity of an eigenvalue
+ is equals to the geometric multiplicty and so we have shown that 
+\begin_inset Formula $l\geq m$
+\end_inset
+
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Let's show now that 
+\begin_inset Formula $l\leq m$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Let 
+\begin_inset Formula $u=(u_{1},\dots,u_{n})$
+\end_inset
+
+ be an eigenvector of A which corrosponds to eigenvalue 
+\begin_inset Formula $k$
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+For each 
+\begin_inset Formula $i\in[m]$
+\end_inset
+
+ we can take 
+\begin_inset Formula $u_{i*}=max\{|u_{j}|\,\,|\,\,j\in C_{i}\}$
+\end_inset
+
+.
+ lets suppose w.l.o.g that 
+\begin_inset Formula $u_{i*}>0$
+\end_inset
+
+.
+\begin_inset Formula 
+\[
+ku_{i*}=[Au]_{i*}=\sum_{j=1}^{n}A_{i*,j}u_{j}=\underset{(i*,j)\in E(G)}{\sum}u_{j}
+\]
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+The sum on the right side has exactly k terms and from the left side we
+ know that their average is 
+\begin_inset Formula $v_{i*}$
+\end_inset
+
+, since 
+\begin_inset Formula $v_{i*}$
+\end_inset
+
+ is also their maximum we know that
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\forall j\,\,\,\,s.t\,\,\,\,(i*,j)\in E(G),\,u_{j}=u_{i*}
+\]
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+So we get that for each 
+\begin_inset Formula $i\in[m]$
+\end_inset
+
+, 
+\begin_inset Formula $v_{j}=v_{i*}$
+\end_inset
+
+ for all 
+\begin_inset Formula $j\in C_{i}$
+\end_inset
+
+.
+ This means that 
+\begin_inset Formula 
+\[
+u=\alpha_{1}v_{1}+\dots\alpha_{m}v_{m}
+\]
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+where 
+\begin_inset Formula 
+\[
+\alpha_{i}=u_{i*}
+\]
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+meaning u is a linear combination of 
+\begin_inset Formula $v_{1},\dots v_{m}$
+\end_inset
+
+ and there are exactly m eigenvectors of eigenvalue k.
+\end_layout
+
+\begin_layout Enumerate
+Suppose that G has a bipartite connected component 
+\begin_inset Formula $C$
+\end_inset
+
+, denote the two components comprising C as 
+\begin_inset Formula $C_{1}$
+\end_inset
+
+and 
+\begin_inset Formula $C_{2}$
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+Consider the following vector 
+\begin_inset Formula $v\in\Re^{n}:\,v_{i}=\begin{cases}
+1 & i\in C_{1}\\
+-1 & i\in C_{2}\\
+0 & otherwise
+\end{cases}$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula 
+\[
+[Av]_{i}=\sum_{j=1}^{n}A_{ij}v_{j}=\begin{cases}
+-k & i\in C_{1}\\
+k & i\in C_{2}\\
+0 & otherwise
+\end{cases}\Rightarrow[Av]_{i}=-kv_{i}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+Av=-kv
+\]
+
+\end_inset
+
+So there exists an eigenvalue that is equal to 
+\begin_inset Formula $-k$
+\end_inset
+
+.
+ It follows from 
+\begin_inset Formula $|\lambda_{i}|\leq k$
+\end_inset
+
+ and from 
+\begin_inset Formula $\lambda_{1}\geq\lambda_{2}\geq\dots\geq\lambda_{n}$
+\end_inset
+
+ that 
+\begin_inset Formula 
+\[
+\lambda_{n}=-k
+\]
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Now suppose that 
+\begin_inset Formula $-k$
+\end_inset
+
+ is an eigenvalue of A:
+\begin_inset Newline newline
+\end_inset
+
+Let's assume that G has no bipartite connected component, therefore each
+ of the connected components of G has an odd cycle.
+ Let's consider one such connected component C of G.
+\begin_inset Newline newline
+\end_inset
+
+Suppose that 
+\begin_inset Formula $|v_{i*}|=max\{|v_{j}|\,\,|\,j\in[n]\,,\,j\in C\}$
+\end_inset
+
+ .
+\begin_inset Newline newline
+\end_inset
+
+Again we know that 
+\begin_inset Formula 
+\[
+-kv_{i*}=[Av]_{i*}=\sum_{j=1}^{n}A_{i*,j}v_{j}=\underset{(i*,j)\in E(G)}{\sum}v_{j}
+\]
+
+\end_inset
+
+So 
+\begin_inset Formula $-v_{i*}$
+\end_inset
+
+ is the average of 
+\begin_inset Formula $v_{j}$
+\end_inset
+
+ but also 
+\begin_inset Formula $|v_{j}|\leq|v_{i*}|$
+\end_inset
+
+ therefore 
+\begin_inset Formula $\forall j\in C,(i*,j)\in E(G)\,,\,v_{j}=-v_{i*}$
+\end_inset
+
+.
+ Since we can get from 
+\begin_inset Formula $i_{*}$
+\end_inset
+
+to any other vertice in C we can conclude by applying this logic recursively
+ that for each vertice i we choose in 
+\begin_inset Formula $C$
+\end_inset
+
+, 
+\begin_inset Formula $\forall j\in C,(i,j)\in E(G)\,,\,v_{j}=-v_{i*}$
+\end_inset
+
+.
+ Now if we apply this on the odd cycle in C we will conclude that 
+\begin_inset Formula 
+\[
+v_{i*}=-v_{i*}\Rightarrow v_{i*}=0\Rightarrow\forall i\in C\,,\,v_{i}=0
+\]
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Now apply this logic for all connected components of G and we get that 
+\begin_inset Formula $v=0$
+\end_inset
+
+ in contradiction of v being an eigenvector of A.
+\end_layout
+
+\begin_layout Enumerate
+Suppose that 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ is an eigenvalue of A and we need to prove that 
+\begin_inset Formula $-\lambda$
+\end_inset
+
+ is also an eigenvalue.
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\exists v\,s.t\,Av=\lambda v
+\]
+
+\end_inset
+
+G is bipartite, let's denote the sides of G as 
+\begin_inset Formula $C_{1},C_{2}$
+\end_inset
+
+.
+ Now let's consider the following vector:
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align*}
+v'_{i} & =\begin{cases}
+v_{i} & i\in C_{1}\\
+-v_{i} & i\in C_{2}
+\end{cases}
+\end{align*}
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula 
+\[
+[Av']_{r}=\sum_{i=1}^{n}A_{ri}v'_{i}=\underset{i\in C_{1}}{\sum}A_{ri}v_{i}-\underset{i\in C_{2}}{\sum}A_{ri}v_{i}=\begin{cases}
+-\underset{i\in C_{2}}{\sum}A_{ri}v_{i}=-\lambda v_{r}=-\lambda v'_{r} & r\in C_{1}\\
+\underset{i\in C_{1}}{\sum}A_{ri}v_{i}=[Av]_{r}=\lambda v_{r}=-\lambda v'_{r} & r\in C_{2}
+\end{cases}
+\]
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula 
+\[
+Av'=-\lambda v'
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Let 
+\begin_inset Formula $G=K_{n}$
+\end_inset
+
+
+\begin_inset Formula 
+\begin{align*}
+G_{A}=\left[\begin{array}{ccccc}
+0 & 1 & \dots & 1 & 1\\
+1 & 0 & 1 & \vdots & 1\\
+\vdots & \vdots & \ddots & 0 & \vdots\\
+1 & 1 & \dots & 1 & 0
+\end{array}\right]
+\end{align*}
+
+\end_inset
+
+
+\begin_inset Formula 
+\begin{multline*}
+det(G_{A}-\lambda I)=\left|\begin{array}{cccc}
+-\lambda & 1 & \dots & 1\\
+1 & -\lambda & \dots & 1\\
+\vdots & \vdots & \ddots & \vdots\\
+1 & 1 & \dots & -\lambda
+\end{array}\right|=\\
+\overset{1\leq i\leq n-1,R_{i}\Leftarrow R_{i}-R_{n}}{=}\left|\begin{array}{cccccc}
+(-\lambda-1) & 0 & 0 & \dots & 0 & (1+\lambda)\\
+0 & (-\lambda-1) & 0 & \dots & 0 & (1+\lambda)\\
+\vdots & \vdots & \vdots & \ddots & \vdots & \vdots\\
+1 & 1 & 1 & \dots & 1 & -\lambda
+\end{array}\right|=\\
+\overset{1\leq i\leq n-1,R_{n}\Leftarrow C_{n}C_{n}}{=}\left|\begin{array}{cccccc}
+(-\lambda-1) & 0 & 0 & \dots & 0 & 0\\
+0 & (-\lambda-1) & 0 & \dots & 0 & 0\\
+\vdots & \vdots & \vdots & \ddots & \vdots & \vdots\\
+1 & 1 & 1 & \dots & 1 & (-\lambda+n-1)
+\end{array}\right|=\\
+(-\lambda-1)^{n-1}(-\lambda+n-1)\\
+\end{multline*}
+
+\end_inset
+
+Therefore:
+\begin_inset Formula 
+\[
+\lambda_{1}=-1,\,\lambda_{2}=(n-1)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+We have seen in recitation that 
+\begin_inset Formula $A_{Gi,j}^{k}$
+\end_inset
+
+ is the number of length-k paths from i to j in G.
+ A triangle is a length-3 path from a vertex to itself.
+ We can count the number of length-3 paths that start from each vertex and
+ end in that same vertex but this will count each triangle 6 times since
+ there are 6 ways decide on the order of the vertices in the triangle.
+ Therefore :
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\text{\# triangles in G=}\frac{1}{6}tr(A_{G}^{3})
+\]
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Since A is a real symmetric matrix by the spectral decomposition theorem
+ we can say:
+\begin_inset Formula 
+\[
+A_{G}=U\Lambda U^{T}
+\]
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Where U is an orthogonal matrix and 
+\begin_inset Formula $\Lambda$
+\end_inset
+
+ is a diagonal 
+\begin_inset Formula $\Lambda=diag(\lambda_{1},\dots,\lambda_{n})$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\text{\# triangles in G=}\frac{1}{6}tr(A_{G}^{3})=\frac{1}{6}tr(U\Lambda U^{T}U\Lambda U^{T}U\Lambda U^{T})=
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+=\frac{1}{6}tr(U\Lambda\Lambda\Lambda U^{T})=\frac{1}{6}tr(U^{T}U\Lambda^{3})=\frac{1}{6}tr(\Lambda^{3})=\frac{1}{6}\sum_{i=1}^{n}\lambda_{i}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $A\in M_{n}(\Re),\,\,S=\{x\in\Re^{n}:\|x\|=1\}$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $f:S\rightarrow\Re\,,\,f(x)=x^{T}Ax$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+f is bounded:
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula 
+\[
+f(x)=\underset{i,j}{\sum}x_{i}a_{ij}x_{j}\underset{x_{i},x_{j}\leq1}{\leq}\underset{ij}{\sum}a_{ij}
+\]
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+f is closed:
+\begin_inset Newline newline
+\end_inset
+
+f is bounded therefore it has a supremum.
+\begin_inset Formula 
+\[
+L=sup\{x^{T}Ax\,:\,||x||=1\}
+\]
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\forall\epsilon\exists x\,s.t.\,f(x)>L-\epsilon$
+\end_inset
+
+, lets denote 
+\begin_inset Formula $\epsilon_{n}=\frac{1}{n}$
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+,so we know 
+\begin_inset Formula 
+\[
+\exists x_{n}\,s.t.\,f(x_{n})>L-\frac{1}{n}
+\]
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+denote 
+\begin_inset Formula $f(x_{n})=f_{n}$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+f_{n}=x_{n}^{T}Ax_{n}\underset{n\rightarrow\infty}{\rightarrow\,\,\,\,\,\,L}
+\]
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\{x_{n}\}_{n\in\mathbb{N}}$
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+is a sequence in S and S is compact therefore it has a convergant subsequence
+ , 
+\begin_inset Formula $\{x_{n_{k}}\}\rightarrow x_{0}\in S$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula 
+\[
+f_{n_{k}}\overset{def}{=}f(x_{n_{k}})\rightarrow L
+\]
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+and since f is continuous it follows that 
+\begin_inset Formula $f(x_{0})=L$
+\end_inset
+
+ and so f obtains a maximum.
+\end_layout
+
+\begin_layout Enumerate
+Let 
+\begin_inset Formula $v\in S$
+\end_inset
+
+ be a vector on which f is maximal.
+\begin_inset Newline newline
+\end_inset
+
+Let 
+\begin_inset Formula $u\in span(\{v\})^{\perp}$
+\end_inset
+
+, 
+\begin_inset Formula $g:\mathbb{R\rightarrow R},\,g(t)=f\left(\frac{v+tu}{||v+tu||}\right)$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $g(t)=f\left(\frac{v+tu}{||v+tu||}\right)=\frac{1}{||v+tu||^{2}}((v+tu)^{T}A(v+tu))=\frac{1}{||v+tu||^{2}}(v^{T}Av+(tu)^{T}Av+v^{T}Atu+(tu)^{T}Atu)\underset{\text{v maximizes f}}{\leq}v^{T}Av$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $||v+tu||^{2}=\langle v,v\rangle+\langle v,tu\rangle+\langle tu,v\rangle+\langle tu,tu\rangle=1+\langle tu,tu\rangle$
+\end_inset
+
+ 
+\begin_inset Newline newline
+\end_inset
+
+Therefore
+\begin_inset Formula 
+\[
+(v^{T}Av+(tu)^{T}Av+v^{T}Atu+(tu)^{T}Atu)\underset{}{\leq}(1+\langle tu,tu\rangle)v^{T}Av
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\frac{(tu)^{T}Av+v^{T}Atu}{\langle tu,tu\rangle}+\frac{(tu)^{T}Atu}{\langle tu,tu\rangle}\underset{}{\leq}v^{T}Av
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\frac{2u^{T}Av}{t\langle u,u\rangle}+\frac{u^{T}Au}{\langle u,u\rangle}\underset{}{\leq}v^{T}Av
+\]
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+this holds 
+\begin_inset Formula $\forall t\in\mathbb{R}$
+\end_inset
+
+, if we take small enough t the inequality will not hold unless 
+\begin_inset Formula $u^{T}Av=0.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Let 
+\begin_inset Formula $v_{2},\dots,v_{n}\in\Re^{n}$
+\end_inset
+
+ be an orthonormal basis of 
+\begin_inset Formula $span({v})^{\perp}$
+\end_inset
+
+ then since 
+\begin_inset Formula $v_{2},\dots,v_{n}\in span({v})^{\perp}$
+\end_inset
+
+ then from section (b) we have
+\begin_inset Formula 
+\[
+2\leq i\leq n\,\,\,\,,\,\,\,\,v_{i}^{T}Av=0
+\]
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+and so 
+\begin_inset Formula $v,v_{1},v_{2},\dots,v_{n}$
+\end_inset
+
+ is an orthonormal basis of 
+\begin_inset Formula $\Re^{n}$
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $Av=\langle Av,v\rangle v+\sum_{i=2}^{n}\langle Av,v_{i}\rangle v_{i})$
+\end_inset
+
+ since 
+\begin_inset Formula $v_{i}\in span(\{v\})^{\perp}$
+\end_inset
+
+ then by section (b) 
+\begin_inset Formula $\langle Av,v_{i}\rangle=0$
+\end_inset
+
+ and so we get
+\begin_inset Formula 
+\[
+Av=\langle Av,v\rangle v
+\]
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Therefore v is an eigenvector of A.
+\end_layout
+
+\begin_layout Enumerate
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+Let
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+'s suppose that 
+\begin_inset Formula $v_{1},\dots,v_{k}\in\Re^{n}$
+\end_inset
+
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ are orthonormal eigenvectors of A and find 
+\begin_inset Formula $v_{k+1}$
+\end_inset
+
+which is orthogonal to 
+\begin_inset Formula $v_{1},\dots,v_{k}$
+\end_inset
+
+ and is an eigenvector of A.
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+
+\begin_inset Newline newline
+\end_inset
+
+Define 
+\begin_inset Formula $S=\{x\in span(\{v_{1},\dots,v_{k}\})^{\perp}:||x||=1\}$
+\end_inset
+
+, suppose that f is maximized on S by some vector 
+\begin_inset Formula $v_{k+1}$
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula 
+\[
+v_{k+1}\in span(\{v_{1},\dots,v_{k}\})^{\perp}\Rightarrow v_{1},\dots,v_{k}\in span(\{v_{k+1}\})^{\perp}
+\]
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+By section (b) we know that 
+\begin_inset Formula $1\leq i\leq k\,\,\,,\,\,\,v_{i}^{T}v_{k+1}=0$
+\end_inset
+
+ and so 
+\begin_inset Formula $v_{1},\dots,v_{k},v_{k+1}\in\Re^{n}$
+\end_inset
+
+ are orthonormal vectors, we can complete these set to an orthonormal base
+ of 
+\begin_inset Formula $\Re^{n}:v_{1},\dots,v_{k},v_{k+1},\dots,v_{n}\in\Re^{n}$
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $Av_{k+1}=\sum_{i=1}^{n}\langle Av_{k+1},v_{i}\rangle v_{i}=\langle v_{k+1},v_{k+1}\rangle v_{k+1}=||v_{k+1}||^{2}v_{k+1}$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_body
+\end_document

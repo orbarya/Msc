@@ -1,0 +1,410 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\begin{document}
+	\section{}
+	\[
+	A=
+	\begin{bmatrix}
+	-\frac{24}{25} & \frac{4}{5} \\
+	-\frac{6}{5} & 0 \\
+	-\frac{32}{25} & -\frac{3}{5}
+	\end{bmatrix}
+	\]
+	Suppose that A = U$\Sigma V^{T}$ \\
+	Let's find the eigenvalues of $A^{T}A$:
+	\[	
+	A^{T}A =
+	\frac{1}{5}
+	\begin{bmatrix}
+	-\frac{24}{5} & -6 & -\frac{32}{5} \\
+	4 & 0 & -3
+	\end{bmatrix}
+	\cdot
+	\frac{1}{5}
+	\begin{bmatrix}
+	-\frac{24}{5} & 4 \\
+	-6 & 0 \\
+	-\frac{32}{5} & -3
+	\end{bmatrix}
+	=
+	\begin{bmatrix}
+	4 & 0 \\
+	0 & 1
+	\end{bmatrix}\\
+	\]
+	Therefore\\
+	\[
+	\begin{split}
+	\lambda_{1}=4,\lambda_{2}=1 \\
+	\sigma_{1}=2, \sigma_{2}=1 \\
+	\Sigma = 
+	\begin{bmatrix}
+	2 & 0 & 0 \\
+	0 & 1 & 0 \\ 
+	0 & 0 & 0 \\
+	\end{bmatrix}	
+	\end{split}
+	\]
+	Now, for finding V, we must find a base of eigenvectors.\\
+	Eigenvector corrosponding to $\lambda_{1}$ and $\lambda_{2}:$
+	\[
+	v_{1}=\begin{bmatrix}
+	1\\
+	0
+	\end{bmatrix},
+	v_{2}=\begin{bmatrix}
+	0\\
+	1
+	\end{bmatrix}
+	\]
+	Therefore
+	\[
+	V=\begin{bmatrix}
+	1 & 0 \\
+	0 & 1
+	\end{bmatrix}
+	\]
+	Now to compute U, we use $AV=U\Sigma$
+	\[
+	AV=\frac{1}{5}
+	\begin{bmatrix}
+	-\frac{24}{5} & \frac{4}{5} \\
+	-\frac{6}{5} & 0 \\
+	-\frac{32}{25} & -\frac{3}{5}
+	\end{bmatrix}
+	\]
+	Let's calculate the columns of U:
+	\[
+	u_{1}=\frac{[Av]_{1}}{\sigma_{1}}=\frac{1}{2}\frac{1}{5}
+	\begin{bmatrix}
+	-\frac{24}{5} \\
+	-6 \\
+	-\frac{32}{5}
+	\end{bmatrix}
+	=
+	\frac{1}{5}
+	\begin{bmatrix}
+	-\frac{12}{5} \\
+	-3 \\
+	-\frac{16}{5}
+	\end{bmatrix},
+	u_{2}=\frac{[Av]_{2}}{\sigma_{2}}=\frac{1}{5}
+	\begin{bmatrix}
+	-\frac{4}{5} \\
+	0 \\
+	-\frac{3}{5}
+	\end{bmatrix}
+	\]
+	We complete the two vectors $u_{1},u_{2}$ to an orthonormal base:
+	\[
+	u_{3}=
+	\frac{1}{5}	
+	\begin{bmatrix}
+	\frac{3}{5} \\
+	\frac{28}{75} \\
+	-\frac{4}{5}	
+	\end{bmatrix}	
+	\]
+	\[		
+	U=
+	\frac{1}{5}
+	\begin{bmatrix}
+	-\frac{12}{5} & -\frac{4}{5} & \frac{3}{5}\\
+	-3 & 0 & \frac{28}{75}\\
+	-\frac{16}{5} & -\frac{3}{5} & -\frac{4}{5}
+	\end{bmatrix}
+	\]
+	
+	$B=
+	\begin{bmatrix}
+	1 & 0 & 0 & 1\\
+	0 & 0 & 1 & 1\\
+	0 & 1 & 1 & 0\\
+	1 & 1 & 0 & 0
+	\end{bmatrix}$
+	Suppose that B = U$\Sigma V^{T}$ \\
+	Let's find the eigenvalues of $B^{T}B$:
+	\[
+	B^{T}B =
+	\begin{bmatrix}
+	1 & 0 & 0 & 1\\
+	0 & 0 & 1 & 1\\
+	0 & 1 & 1 & 0\\
+	1 & 1 & 0 & 0
+	\end{bmatrix}
+	\begin{bmatrix}
+	1 & 0 & 0 & 1\\
+	0 & 0 & 1 & 1\\
+	0 & 1 & 1 & 0\\
+	1 & 1 & 0 & 0
+	\end{bmatrix}
+	=
+	\begin{bmatrix}
+	2 & 1 & 0 & 1\\
+	1 & 2 & 1 & 0\\
+	0 & 1 & 2 & 1\\
+	1 & 0 & 1 & 2
+	\end{bmatrix}
+	\]	
+	\begin{gather*}
+	\det(\lambda I - B)=\begin{vmatrix}	
+	\lambda-2 & -1 & 0 & -1\\
+	-1 & \lambda-2 & -1 & 0\\
+	0 & -1 & \lambda-2 & -1\\
+	-1 & 0 & -1 & \lambda-2
+	\end{vmatrix}=
+	(\lambda-2)
+	\begin{vmatrix}
+	\lambda-2 & -1 & 0 \\
+	-1 & \lambda-2 & -1 \\
+	0 & -1 & \lambda-2
+	\end{vmatrix}		
+	+
+	\begin{vmatrix}	
+	-1 & -1 & 0 \\
+	0 & \lambda-2 & -1 \\
+	-1 & -1 & \lambda-2
+	\end{vmatrix}
+	+\\
+	\begin{vmatrix}
+	-1 & \lambda-2 & -1 \\
+	0 & -1 & \lambda-2 \\
+	-1 & 0 & -1
+	\end{vmatrix}=
+	(2-\lambda)^2(4-\lambda)\lambda\\
+	\lambda_{1}=2,\lambda_{2}=4, 	\lambda_{3}=0\\
+	\sigma_{1}=2, \sigma_{2,3}=\sqrt{2},\sigma_{4}=0, 
+	\Sigma=\begin{bmatrix}
+	2 & 0 & 0 & 0\\
+	0 & \sqrt{2} & 0 & 0\\
+	0 & 0 & \sqrt{2} & 0\\
+	0 & 0 & 0 & 0
+	\end{bmatrix}
+	\end{gather*}
+	Subspace of eigenvalue $\lambda_{1}$:
+	\begin{gather*}
+	\begin{bmatrix}	
+	0 & -1 & 0 & -1\\
+	-1 & 0 & -1 & 0\\
+	0 & -1 & 0 & -1\\
+	-1 & 0 & -1 & 0
+	\end{bmatrix}\begin{bmatrix}
+	x_{1}\\
+	x_{2}\\
+	x_{3}\\
+	x_{4}
+	\end{bmatrix}=0 \\
+	x_{2}=-x_{4}, x_{1} = -x_{3} \\
+	v_{1}=\frac{1}{2}\begin{bmatrix}
+	1\\
+	1\\
+	-1\\
+	-1\\
+	\end{bmatrix},
+	v_{2}=\frac{1}{2}\begin{bmatrix}
+	1\\
+	-1\\
+	-1\\
+	1
+	\end{bmatrix}
+	\end{gather*}
+	Subspace of eigenvalue $\lambda_{2}$:
+	\begin{gather*}
+	\begin{bmatrix}	
+	2 & -1 & 0 & -1\\
+	-1 & 2 & -1 & 0\\
+	0 & -1 & 2 & -1\\
+	-1 & 0 & -1 & 2
+	\end{bmatrix}\begin{bmatrix}
+	x_{1}\\
+	x_{2}\\
+	x_{3}\\
+	x_{4}
+	\end{bmatrix}=0 \\
+	2x_{1} -x_{2} -x_{4}=0\\
+	-x_{1} + 2x_{2} -x_{3}=0\\
+	-x_{2} + 2x_{3} -x_{4}=0\\
+	-x_{1} -x_{3} + 2x_{4}=0\\
+	v_{3}=\frac{1}{2}\begin{bmatrix}
+	1\\
+	1\\
+	1\\
+	1\\
+	\end{bmatrix}
+	\end{gather*}
+	Subspace of eigenvalue $\lambda_{3}$:
+	\begin{gather*}
+	\begin{bmatrix}	
+	-2 & -1 & 0 & -1\\
+	-1 & -2 & -1 & 0\\
+	0 & -1 & -2 & -1\\
+	-1 & 0 & -1 & -2
+	\end{bmatrix}\begin{bmatrix}
+	x_{1}\\
+	x_{2}\\
+	x_{3}\\
+	x_{4}
+	\end{bmatrix}=0 \\
+	-2x_{1} -x_{2} -x_{4}=0\\
+	-x_{1} - 2x_{2} -x_{3}=0\\
+	-x_{2} - 2x_{3} -x_{4}=0\\
+	-x_{1} -x_{3} - 2x_{4}=0\\
+	v_{4}=\frac{1}{2}\begin{bmatrix}
+	1\\
+	-1\\
+	1\\
+	-1\\
+	\end{bmatrix}
+	\end{gather*}
+	\begin{gather*}
+	V=\frac{1}{2}\begin{bmatrix}
+	1 & 1 & 1 & 1 \\
+	1 & -1 & 1 & -1\\
+	-1 & -1 & 1 & 1\\
+	-1 & 1 & 1 & -1
+	\end{bmatrix},
+	BV=\begin{bmatrix}
+	0 & 1 & 1 & 0\\
+	-1 & 0 & 1 & 0\\
+	0 & -1 & 1 & 0\\
+	1 & 0 & 1 & 0
+	\end{bmatrix}\\
+	u_{1}=\frac{1}{\sqrt{2}}\begin{bmatrix}
+	0\\
+	-1\\
+	0\\
+	1
+	\end{bmatrix},
+	u_{2}=\frac{1}{\sqrt{2}}\begin{bmatrix}
+	1\\
+	0\\
+	-1\\
+	0
+	\end{bmatrix},
+	u_{3}=\frac{1}{2}\begin{bmatrix}
+	1\\
+	1\\
+	1\\
+	1
+	\end{bmatrix},
+	u_{4}=\frac{1}{2}\begin{bmatrix}
+	1\\
+	-1\\
+	1\\
+	-1
+	\end{bmatrix},
+	U=\frac{1}{\sqrt{2}}\begin{bmatrix}
+	0 & 1 & \frac{1}{\sqrt{2}} & \frac{1}{\sqrt{2}} \\
+	-1 & 0 & \frac{1}{\sqrt{2}} & -\frac{1}{\sqrt{2}} \\
+	0 & -1 & \frac{1}{\sqrt{2}} & \frac{1}{\sqrt{2}} \\
+	1 & 0 & \frac{1}{\sqrt{2}} & -\frac{1}{\sqrt{2}}
+	\end{bmatrix}
+	\end{gather*}
+	\section{}
+	\begin{proof}
+	From the SVD theorem : 
+	$A=U\Sigma V^{T}.$
+	Let us denote $V=[v_{1}, ... v_{n}],\quad U=[u_{1}, ... u_{n}]$ \\
+	$\forall$ v $\in$ $\Re ^{n}$
+	\begin{gather*}
+	v = \sum_{j=1}^{n}<v_{j},v>v_{j}; \\
+	Av=U\Sigma V^{T}v= U\Sigma V^{T}(\sum_{j=1}^{n}<v_{j},v>v_{j})=U\Sigma \sum_{j=1}^{n}<v_{j},v>e_{j}=\sum_{j=1}^{n}<v_{j},v>\sigma_{j}u_{j}\\
+||Av||_{2}^{2}=\sum_{j=1}^{n}(<v_{j},v>\sigma_{j})^{2}\\
+||Av||_{2}^{2}=	\sum_{j=1}^{n}(<v_{j},v>\sigma_{j})^{2} \geq \sigma_{n}^{2} \sum_{j=1}^{n}(<v_{j},v>)^{2} = \sigma_{n}||v||_{2}^{2} \\
+||Av||_{2}^{2}=	\sum_{j=1}^{n}(<v_{j},v>\sigma_{j})^{2} \leq \sigma_{1}^{2} \sum_{j=1}^{n}(<v_{j},v>)^{2} = \sigma_{1}||v||_{2}^{2} \\
+\Downarrow \\
+\sigma_{n}||v||_{2} \leq ||Av||_{2} \leq \sigma_{1}||v||_{2}
+	\end{gather*}
+	\end{proof}
+
+	\section{}
+\begin{proof}	
+	A $\in M_{n}(\Re);\quad A^{k}=0 \\ $ By the spectral decomposition theorem:
+	$A=U\Lambda U^{T}$, where U is an orthogonal matrix and $\Lambda$ is a   	diagonal matrix.
+	\begin{gather*}
+	A^{k}=(U\Lambda U^{T})^{k}=\underbrace{U	\Lambda U^{T}U\Lambda U^{T}...U\Lambda U^{T}}_{\text{k times}}= U\Lambda^{k}U^{T}=0 \qquad \Rightarrow \Lambda^{k}=0 \\		
+	\lambda_{1}^{k}=0,...,\lambda_{n}^{k}=0 \quad \Rightarrow \quad \lambda_{1}=0,...,\lambda_{n}=0 \quad \Rightarrow \quad \Lambda = 0 \\
+	A=U\Lambda U^{T} = U 0 U^{T} = 0		
+	\end{gather*}
+	\end{proof}
+	\section{}
+	Lemma : Let A $\in S_{n}(\Re)$ and let $\lambda_{i}$ be an eigenvalue of A then $|\lambda_{i}|$ is a singular value of A.
+	\begin{proof}
+	Since $\lambda_{i}$ is an eigenvalue of A, $\exists v\in \Re^{n}$ s.t. \\
+	\begin{gather*}	
+	Av = \lambda_{i} v \quad \Rightarrow \quad AA^{T}v=A^{2}v=A(\lambda_{i} v) = \lambda_{i} ^{2} v \Rightarrow	
+	\end{gather*}
+	$\lambda_{i}^2$ is an eigenvalue of $AA^{T}$, therefore, $\sqrt{\lambda_{i}^2}=|\lambda_{i}|$ is a singular value of A.
+	\end{proof}
+	
+	By the spectral decompostion thm. $A=U\Lambda U^{T}$
+	\begin{gather*}
+	|det(A)|=|det(U\Lambda U^{T})|=|det(U)det(\Lambda)det(U^{T})|=|det(U^{T})det(U)det(\Lambda)|=|det(UU^{T})det(\Lambda)|= \\ 
+	|det(I)det(\Lambda)|=|det(\Lambda)|=
+	\left|\prod_{i=1}^{n}\lambda_{i}\right|=\prod_{i=1}^{n}\left|\lambda_{i}\right|=\prod_{i=1}^{n}\sigma_{i}
+	\end{gather*}
+	\section{}
+	Let A $\in M_{m,n}(\Re)$ have rank k.
+	\subsection{}
+	Let $u,v\in \Re^{n}$.\\
+	If $uv^{T}=0_{m,n}$ then it is of rank 0. If $uv^{T}$ has exactly one non zero column, then $Rank(uv^T)=1.$ \\
+	Suppose $uv^{T}$ has two non zero columns i and j, then:
+	$[uv^T]_{i}=u[v^T]_{i}$; \quad $[uv^T]_{j}=u[v^T]_{j}$ $\Rightarrow [uv^T]_{i} = \frac{[v^T]_{i}}{[v^T]_{j}}[uv^T]_{j}$
+	Therefore the i and j columns are linearly dependent and therefore $Rank (uv^T) \leq 1$ 
+	\subsection{}
+	\begin{proof}	
+	Let's denote the columns of A as $u_{i}$. $A=(u_{1},..., u_{n}).$\\
+	As $Rank(A)=k$ we know that there exists some permutation of 1,...,n  $i_{1},...,i_{n}$ s.t  $u_{i_{1}},...,u_{i_{k}}$ are linearly independant and $u_{i{k+1}},...,u_{i{n}}$ are dependent on $u_{i_{1}},...,u_{i_{k}}$
+	let's assume, w.l.o.g, that $i_{1},...,i_{n}$ = 1,...,n.
+	Therefore, 
+	\begin{gather*}
+	\forall j, \quad k+1 \leq j\leq n, \quad u_{j} = \sum_{l=1}^{k}<u_{l}, u_{j}>u_{j}
+	\end{gather*}	
+
+	Let's look at the following k matrices:\\
+	$\forall 1 \leq l \leq k, \quad A_{l}=
+	\begin{bmatrix}
+	. &  & . &&.&&.&&.\\
+	. &  & . &&.&&.&&.\\
+	. &  & . &&.&&.&&.\\
+	0 &...& u_{l} &... & 0 &<u_{k+1}, u_{l}>&u_{l}& ... <u_{n}, u_{l}>&u_{l}&\\
+	. &  & . &&.&&.&&.\\
+	. &  & . &&.&&.&&.\\
+	. &  & . &&.&&.&&.\\	
+	\end{bmatrix}$\\
+	Clearly, $\forall 1 \leq l \leq k, rank(A_{i})=1$\\\\
+	$\sum_{i=1}^{k}A_{i}=
+	\begin{bmatrix}
+	. &  & . &&.&&.&&.\\
+	. &  & . &&.&&.&&.\\
+	. &  & . &&.&&.&&.\\
+	0 &...& u_{l} &... & 0 &\sum_{l=1}^{k}<u_{k+1}, u_{l}>&u_{l}& ... \sum_{l=1}^{k}<u_{n}, u_{l}>&u_{l}&\\
+	. &  & . &&.&&.&&.\\
+	. &  & . &&.&&.&&.\\
+	. &  & . &&.&&.&&.\\	
+	\end{bmatrix}\\	
+	=	\begin{bmatrix}
+	. &  & . &.&&.\\
+	. &  & . &.&&.\\
+	. &  & . &.&&.\\
+	u_{1} &...& u_{k} &u_{k+1}& ...& u_{n}&\\
+	. &  & . &.&&.\\
+	. &  & . &.&&.\\
+	. &  & . &.&&.\\
+	\end{bmatrix}= A\\	
+$
+\end{proof}	
+\subsection{}
+	From the SVD theorem : 
+	$A=U\Sigma V^{T}.$
+	Let us denote $V=[v_{1}, ... ,v_{n}],\quad U=[u_{1}, ... ,u_{n}]$ and let us denote $\Sigma_{i}=$ to be the matrix with all zeroes except at position $\Sigma_{i,i} =\sigma_{i}.$
+	
+	\begin{gather*}
+	U\Sigma_{i}V^{T}=u_{i}\sigma_{i}v_{i}^{T}
+	\\A=\sum_{i=1}^{n}u_{i}\sigma_{i}v_{i}^T	
+	\end{gather*}
+	Since A is of rank k it has k positive singular values, therefore 
+	$A=\sum_{i=1}^{k}u_{i}\sigma_{i}v_{i}^T$
+	We have shown in section 5.1 that $u_iv_i^T$ is of either rank 0 or 1, but in fact $rank(u_iv_i^T)=1$ since if for some $1 \leq i \leq k, u_iv^{T}=0$ it would mean that A is the sum of less than k rank 1 matrices, which indicates that A is of rank lower than k.
+\end{document}

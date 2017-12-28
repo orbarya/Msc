@@ -1,2 +1,0 @@
-When the gaussian is in the middle of the image then the blurred image returns shifted to the middle. That is, the (0,0) of the image is shifted to the center.
-This happens because a shift in the spatial domain adds an exponent factor to the Fourier transformation and then when doing the inverse transform this exponent factor again causes the shift in the spatial domain.

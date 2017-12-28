@@ -1,1 +1,0 @@
-When performing the derivative by using a convolution this is merely an approximation to the derivative since the smallest delta we can take is 1 and not infinitely small.  The derivative in Fourier space is not an approximation but accurate, this explains the difference.

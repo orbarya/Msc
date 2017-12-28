@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="5f82d288-529e-46f9-b171-7ee6b7445609" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/../../Image Processing/.ipynb_checkpoints/Untitled-checkpoint.ipynb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Image Processing/Ex1/.idea/Sample Project.iml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Image Processing/Ex1/.idea/misc.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Image Processing/Ex1/.idea/modules.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Image Processing/Ex1/.idea/workspace.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Image Processing/Ex1/.ipynb_checkpoints/Ex1-checkpoint.ipynb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Image Processing/Ex1/.ipynb_checkpoints/ipythone_experiments-checkpoint.ipynb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Image Processing/Ex1/Pycharm/.idea/Pycharm.iml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Image Processing/Ex1/Pycharm/.idea/misc.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Image Processing/Ex1/Pycharm/.idea/modules.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Image Processing/Ex1/Pycharm/.idea/workspace.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Image Processing/Ex1/Pycharm/README" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Image Processing/Ex1/Pycharm/answer_q1.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Image Processing/Ex1/Pycharm/externals/Low Contrast.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Image Processing/Ex1/Pycharm/externals/Sample-image10-highres.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Image Processing/Ex1/Pycharm/externals/histogram_equlization_example.zip" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Image Processing/Ex1/Pycharm/externals/histogram_equlization_example/equlized.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Image Processing/Ex1/Pycharm/externals/histogram_equlization_example/original.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Image Processing/Ex1/Pycharm/externals/jerusalem.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Image Processing/Ex1/Pycharm/externals/monkey.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Image Processing/Ex1/Pycharm/externals/quantization_examples.zip" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Image Processing/Ex1/Pycharm/externals/quantization_examples/gray_10_quants.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Image Processing/Ex1/Pycharm/externals/quantization_examples/gray_3_quants.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Image Processing/Ex1/Pycharm/externals/quantization_examples/gray_6_quants.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Image Processing/Ex1/Pycharm/externals/quantization_examples/gray_orig.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Image Processing/Ex1/Pycharm/externals/quantization_examples/rgb_10_quants.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Image Processing/Ex1/Pycharm/externals/quantization_examples/rgb_3_quants.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Image Processing/Ex1/Pycharm/externals/quantization_examples/rgb_6_quants.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Image Processing/Ex1/Pycharm/externals/quantization_examples/rgb_orig.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Image Processing/Ex1/Pycharm/externals/src.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Image Processing/Ex1/Pycharm/sol1.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Image Processing/Ex1/Pycharm/sol1.zip" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Image Processing/Ex1/Pycharm/test.tar" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Image Processing/Ex1/Pycharm/test/current/README" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Image Processing/Ex1/Pycharm/test/current/__init__.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Image Processing/Ex1/Pycharm/test/current/answer_q1.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Image Processing/Ex1/Pycharm/test/current/external/Low Contrast.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Image Processing/Ex1/Pycharm/test/current/external/jerusalem.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Image Processing/Ex1/Pycharm/test/current/external/monkey.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Image Processing/Ex1/Pycharm/test/current/sol1.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Image Processing/Ex1/Pycharm/test/ex1_presubmit.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Image Processing/Ex1/Pycharm/test/external/Low Contrast.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Image Processing/Ex1/Pycharm/test/external/jerusalem.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Image Processing/Ex1/Pycharm/test/external/monkey.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Image Processing/Ex1/Pycharm/test/how_to_run_presubmit.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Image Processing/Ex1/Pycharm/test/sol1.zip" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Image Processing/Ex1/Pycharm/test/test" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Image Processing/Ex1/Sample-image10-highres.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Image Processing/Ex2/.idea/Ex2.iml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Image Processing/Ex2/.idea/misc.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Image Processing/Ex2/.idea/modules.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Image Processing/Ex2/.idea/vcs.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Image Processing/Ex2/.idea/workspace.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Image Processing/Ex2/README" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Image Processing/Ex2/Sample-image10-highres.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Image Processing/Ex2/answer_q1.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Image Processing/Ex2/answer_q2.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Image Processing/Ex2/answer_q3.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Image Processing/Ex2/ex2.zip" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Image Processing/Ex2/ex2_tests (1) (1).py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Image Processing/Ex2/monkey.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Image Processing/Ex2/original.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Image Processing/Ex2/presubmit/ex2.zip" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Image Processing/Ex2/presubmit/ex2_presubmit.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Image Processing/Ex2/presubmit/external/monkey.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Image Processing/Ex2/presubmit/test" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Image Processing/Ex2/sol1.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Image Processing/Ex2/sol2.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Image Processing/Ex2/test (3).tar" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Image Processing/Ex3/.idea/Ex3.iml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Image Processing/Ex3/.idea/misc.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Image Processing/Ex3/.idea/modules.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Image Processing/Ex3/.idea/workspace.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Image Processing/Ex3/presubmit/ex3_presubmit.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Image Processing/Ex3/presubmit/presubmit_externals/monkey.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Image Processing/Ex3/presubmit/test" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Image Processing/Ex3/sol1.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Image Processing/Ex3/sol2.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Image Processing/Ex3/sol3.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Image Processing/Lectures/ImageProcessing-17-03.pdf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Image Processing/Lectures/course-17-03-Fourier.pdf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Image Processing/Lectures/course-17-04-Pyramids.pdf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Image Processing/Quizes/Exam06-1.pdf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Image Processing/Quizes/Exam06-2.pdf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Image Processing/Quizes/Exam06-3.pdf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Image Processing/Quizes/Exam07-1.pdf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Image Processing/Quizes/Exam07-2.pdf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Image Processing/Quizes/Exam07-3.pdf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Image Processing/Quizes/Exam08-1.pdf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Image Processing/Quizes/Exam08-2.pdf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Image Processing/Quizes/Exam08-3.pdf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Image Processing/Quizes/Exam09-1.pdf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Image Processing/Quizes/Exam09-2.pdf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Image Processing/Quizes/Exam09-3.pdf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Image Processing/Quizes/Exam10-1.pdf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Image Processing/Quizes/Exam10-2.pdf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Image Processing/Quizes/Exam10-3.pdf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Image Processing/Quizes/Exam11-2.pdf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Image Processing/Quizes/Exam11-3.pdf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Image Processing/Quizes/Exam12-1.pdf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Image Processing/Quizes/Exam12-2.pdf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Image Processing/Quizes/Exam12-3.pdf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Image Processing/Quizes/Exam13-1.pdf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Image Processing/Quizes/Exam13-2.pdf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Image Processing/Quizes/Exam14-1.pdf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Image Processing/Quizes/Exam14-3.pdf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Image Processing/Quizes/Exam15-1.pdf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Image Processing/Quizes/Exam15-1_Ans.pdf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Image Processing/Quizes/Exam15-2.pdf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Image Processing/Quizes/Exam15-2_Ans.pdf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Image Processing/Quizes/Exam15-3.pdf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Image Processing/Quizes/Exam15-3_Ans.pdf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Image Processing/Quizes/Exam16-1.pdf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Image Processing/Quizes/Exam16-1_ans.pdf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Image Processing/Quizes/Exam16-2.pdf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Image Processing/Quizes/Exam16-2_ans.pdf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Image Processing/Quizes/Exam16-3.pdf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Image Processing/Quizes/Exam16-3_ans.pdf" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Image Processing/Untitled.ipynb" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../../Image Processing/python-support_1.0.15_all.deb" afterPath="" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="cal_housing.data" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cal_housing.data">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sol4.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/sol4.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="552">
+              <caret line="23" column="21" lean-forward="true" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="21" />
+              <folding>
+                <element signature="e#0#18#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/sol4.py" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="903" />
+    <option name="y" value="75" />
+    <option name="width" value="924" />
+    <option name="height" value="1068" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scratches" />
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Ex4" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Ex4" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/sol4.py" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="Unnamed" type="PythonConfigurationType" factoryName="Python">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="/usr/bin/python3.5" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Ex4" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/sol4.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="/usr/bin/python3.5" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Ex4" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/sol4.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5f82d288-529e-46f9-b171-7ee6b7445609" name="Default" comment="" />
+      <created>1514477036513</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1514477036513</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="65" y="-4" width="1855" height="1204" extended-state="6" />
+    <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.13207547" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32969034" sideWeight="0.5018868" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36612022" sideWeight="0.49811321" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32969034" sideWeight="0.49811321" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39909092" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/sol4.py</url>
+          <line>41</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/sol4.py</url>
+          <line>40</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="3" />
+    </breakpoint-manager>
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/cal_housing.data">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sol4.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="552">
+          <caret line="23" column="21" lean-forward="true" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="21" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

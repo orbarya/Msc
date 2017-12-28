@@ -1,1 +1,0 @@
-If a segment division will have a grey level segment with no pixels then the procedure will crash because the calculation of q_i which coresponds to this segment will have a denominator of 0 and the procedure will fail with a division by zero error.
