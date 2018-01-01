@@ -624,8 +624,81 @@ Now for the upper bound.
 \begin_inset Newline newline
 \end_inset
 
+Denote :
+\begin_inset Formula 
+\[
+E_{A}=\left|E(A,A)\right|,E_{B}=\left|E(B,B)\right|,E_{AB}=\left|E(A,B)\right|
+\]
 
-\begin_inset Formula $x^{T}Ax=\underset{1\leq i,j\leq n}{\sum}a_{ij}x_{i}x_{j}$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula 
+\[
+x^{T}Ax=\underset{1\leq i,j\leq n}{\sum}a_{ij}x_{i}x_{j}=\underset{i,j\in A}{\sum}1+\underset{i,j\in B}{\sum}1-\underset{i\in A,j\in B}{\sum}1=2E_{A}+2E_{B}-2E_{AB}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\frac{1}{2}nd=E_{A}+E_{B}+E_{AB}\Rightarrow E_{A}+E_{B}=\frac{1}{2}nd-E_{AB}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+2\left(\frac{1}{2}nd-E_{AB}\right)-2E_{AB}=x^{T}Ax\Rightarrow E_{AB}=\frac{nd-x^{T}Ax}{4}
+\]
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+We know that 
+\begin_inset Formula $\lambda_{n}=\underset{x}{min}\frac{x^{T}Ax}{\left\Vert x\right\Vert _{2}}$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\lambda_{n}\leq\frac{x^{T}Ax}{\left\Vert x\right\Vert _{2}}\Rightarrow\lambda_{n}\left\Vert x\right\Vert _{2}\leq x^{T}Ax
+\]
+
+\end_inset
+
+For our defined vectors 
+\begin_inset Formula $\left\Vert x\right\Vert _{2}=n$
+\end_inset
+
+ and so
+\begin_inset Formula 
+\[
+E_{AB}=\frac{nd-x^{T}Ax}{4}\leq\frac{d-\lambda_{n}}{4}n
+\]
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+This is true for every cut (A,B) on the graph, specifically this is true
+ for the maximal cut and so :
+\begin_inset Formula 
+\[
+C\leq\frac{d-\lambda_{n}}{4}n
+\]
+
 \end_inset
 
 
