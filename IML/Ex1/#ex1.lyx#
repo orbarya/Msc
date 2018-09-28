@@ -1,0 +1,2515 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\begin_preamble
+\usepackage{enumitem}
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement H
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Part*
+SVD
+\end_layout
+
+\begin_layout Section*
+Theory
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{}
+\end_layout
+
+\end_inset
+
+Suppose 
+\begin_inset Formula $A\in\mathbb{R}^{mxn}$
+\end_inset
+
+ represents a transformation from vector space 
+\begin_inset Formula $V\subseteq\mathbb{R}^{n}\,to\,W\subseteq\mathbb{R}^{m}$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $im(A)=\left\{ w\in W:w=Ax,x\in V\right\} ,im(A)\subseteq\mathbb{R}^{m}$
+\end_inset
+
+.
+ Let's show that im(A) is a subspace of 
+\begin_inset Formula $\mathbb{R}^{m}$
+\end_inset
+
+:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $A\vec{0}=\vec{0}\Rightarrow im(A)\neq\emptyset$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Let 
+\begin_inset Formula $w_{1},w_{2}\in im(A),\lambda_{1},\lambda_{2}\in\mathbb{R}$
+\end_inset
+
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\exists v_{1},v_{2}\in V\,\,s.t\,\,Av_{1}=w_{1},Av_{2}=w_{2}$
+\end_inset
+
+ 
+\begin_inset Formula 
+\[
+\lambda_{1}w_{1}+\lambda_{2}w_{2}=\lambda_{1}Av_{1}+\lambda_{2}Av_{2}=A(\lambda_{1}v_{1}+\lambda_{2}v_{2})
+\]
+
+\end_inset
+
+and since 
+\begin_inset Formula $\lambda_{1}v_{1}+\lambda_{2}v_{2}\in V$
+\end_inset
+
+ and 
+\begin_inset Formula $A\left(\lambda_{1}v_{1}+\lambda_{2}v_{2}\right)=\lambda_{1}w_{1}+\lambda_{2}w_{2}\in W$
+\end_inset
+
+ we get 
+\begin_inset Formula 
+\[
+\lambda_{1}w_{1}+\lambda_{2}w_{2}\in im(A)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset Formula $im(A^{T})=\left\{ x\in V:x=A^{T}w,w\in W\right\} ,im(A^{T})\subseteq\mathbb{R}^{n}$
+\end_inset
+
+.
+ Let's show that 
+\begin_inset Formula $im(A^{T})$
+\end_inset
+
+ is a subspace of 
+\begin_inset Formula $\mathbb{R}^{n}$
+\end_inset
+
+:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $A^{T}\vec{0}=\vec{0}\Rightarrow im(A^{T})\neq\emptyset$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Let 
+\begin_inset Formula $v_{1},v_{2}\in im(A^{T}),\lambda_{1},\lambda_{2}\in\mathbb{R}$
+\end_inset
+
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\exists w_{1},w_{2}\in W\,\,s.t\,\,Aw_{1}=v_{1},Aw_{2}=v_{2}$
+\end_inset
+
+ 
+\begin_inset Formula 
+\[
+\lambda_{1}w_{1}+\lambda_{2}w_{2}=\lambda_{1}Av_{1}+\lambda_{2}Av_{2}=A(\lambda_{1}v_{1}+\lambda_{2}v_{2})
+\]
+
+\end_inset
+
+and since 
+\begin_inset Formula $\lambda_{1}v_{1}+\lambda_{2}v_{2}\in V$
+\end_inset
+
+ and 
+\begin_inset Formula $A\left(\lambda_{1}v_{1}+\lambda_{2}v_{2}\right)=\lambda_{1}w_{1}+\lambda_{2}w_{2}\in W$
+\end_inset
+
+ we get 
+\begin_inset Formula 
+\[
+\lambda_{1}w_{1}+\lambda_{2}w_{2}\in im(A)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset Formula $ker\left(A\right)=\left\{ x\in V:Ax=0\right\} \subseteq\mathbb{R}^{n},$
+\end_inset
+
+ again, let's show that 
+\begin_inset Formula $ker(A)$
+\end_inset
+
+ is a subspace of 
+\begin_inset Formula $\mathbb{R}^{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $A\vec{0}=\vec{0}\Rightarrow ker\left(A\right)\neq\emptyset$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Let 
+\begin_inset Formula $v_{1},v_{2}\in ker\left(A\right),\lambda_{1},\lambda_{2}\in\mathbb{R}\Rightarrow A\left(\lambda_{1}v_{1}+\lambda_{2}v_{2}\right)=\lambda_{1}Av_{1}+\lambda_{2}Av_{2}=0\Rightarrow\lambda_{1}v_{1}+\lambda_{2}v_{2}\in ker(A)$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{}
+\end_layout
+
+\end_inset
+
+Let T be a linear transformation 
+\begin_inset Formula $T:V\rightarrow W$
+\end_inset
+
+ , since we are concentrating on 
+\begin_inset Formula $V\subseteq\mathbb{R}^{n},\,W\subseteq\mathbb{R}^{m}$
+\end_inset
+
+ we can represent T as 
+\begin_inset Formula $T(x)=Ax$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+An affine transformation is of the form :
+\begin_inset Formula $S(x)=Bx+c$
+\end_inset
+
+ and therefore every linear transformation is an affine transformation with
+ 
+\begin_inset Formula $c=0.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+An affine transformation with 
+\begin_inset Formula $c\neq0$
+\end_inset
+
+ cannot be represented as a linear transformation.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+The projection of vector v onto vector u:
+\begin_inset Formula $P_{v,u}=\frac{\left\langle v,u\right\rangle }{\bigparallel u\bigparallel^{2}}\cdot u=\frac{-2+3+8}{\sqrt{1+1+4}}=-\frac{9}{\sqrt{6}}$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Let 
+\begin_inset Formula $v,w\in\mathbb{R}^{m},v,w\neq0$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $\theta$
+\end_inset
+
+ be the angle between 
+\begin_inset Formula $v$
+\end_inset
+
+ and w.
+\begin_inset Formula 
+\[
+0=cos\theta\Leftrightarrow\frac{\left\langle u,v\right\rangle }{\left\Vert u\right\Vert \cdot\left\Vert v\right\Vert }=0\Leftrightarrow\left\langle u,v\right\rangle =0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Let U be an orthogonal matrix and let A be an invertible matrix.
+\begin_inset Formula $U,A\in\mathbb{R}^{nxn}$
+\end_inset
+
+ 
+\begin_inset Formula 
+\[
+E_{A}=\left\{ y|y=Ax+v,\left\Vert x\right\Vert =1,x\in\mathbb{R}^{n}\right\} ,E_{AU}=\left\{ y|y=AUx+v,\left\Vert x\right\Vert =1,x\in\mathbb{R}^{n}\right\} 
+\]
+
+\end_inset
+
+
+\begin_inset Formula $\underline{E_{AU}\subseteq E_{A}:}$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $Let$
+\end_inset
+
+ 
+\begin_inset Formula $y\in E_{AU},\,y=AUx+v,\left\Vert x\right\Vert =1\Rightarrow\left\langle x,x\right\rangle \Rightarrow\left\langle U^{T}Ux,x\right\rangle \Rightarrow\left\langle Ux,Ux\right\rangle \Rightarrow\left\Vert Ux\right\Vert =1$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Now the affine transformation defining 
+\begin_inset Formula $E_{A}$
+\end_inset
+
+on the vector
+\begin_inset Formula $Ux$
+\end_inset
+
+ gives
+\begin_inset Formula $AUx+v=y\Rightarrow y\in E_{A}$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\underline{E_{A}\subseteq E_{AU}:}$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ Let 
+\begin_inset Formula $y\in E_{A}$
+\end_inset
+
+ 
+\begin_inset Formula $y=Ax+v,\left\Vert x\right\Vert =1,$
+\end_inset
+
+the equation 
+\begin_inset Formula $Uz=x$
+\end_inset
+
+ has a unique solution since U is invertible, therefore:
+\begin_inset Formula 
+\[
+y=AUz+v,\left\Vert x\right\Vert =\left\Vert Uz\right\Vert =\left\Vert z\right\Vert =1=\Rightarrow y\in E_{AU}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Denote 
+\begin_inset Formula $L_{w,b}=\left\{ x|w^{T}x=b\right\} $
+\end_inset
+
+.
+ 
+\begin_inset Newline newline
+\end_inset
+
+The projection of vector x in the hyperplane onto the vector w is:
+\begin_inset Formula 
+\[
+P_{x,w}=\frac{x^{T}w}{\left\Vert w\right\Vert ^{2}}w=\frac{b}{\left\Vert w\right\Vert ^{2}}w
+\]
+
+\end_inset
+
+and the distance between the origin and the hyperplane is the norm of this
+ projection : 
+\begin_inset Formula 
+\[
+Distance=\left\Vert P_{x,w}\right\Vert =\frac{b}{\left\Vert w\right\Vert ^{2}}\left\Vert w\right\Vert =\frac{b}{\left\Vert w\right\Vert }
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Denote 
+\begin_inset Formula $A=\left[\begin{matrix}5 & 5\\
+-1 & 7
+\end{matrix}\right]$
+\end_inset
+
+ and let 
+\begin_inset Formula $A=U\Sigma V^{T}$
+\end_inset
+
+ be the SVD of A, denote the columns of U and V as 
+\begin_inset Formula $u_{i}$
+\end_inset
+
+ and 
+\begin_inset Formula $v_{i}$
+\end_inset
+
+ respectivly.
+\begin_inset Formula 
+\[
+AA^{T}=U\Sigma V^{T}V\Sigma U^{T}=U\Sigma^{2}U^{T}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+AA^{T}=\left[\begin{matrix}5 & 5\\
+-1 & 7
+\end{matrix}\right]\cdot\left[\begin{matrix}5 & -1\\
+5 & 7
+\end{matrix}\right]=\left[\begin{matrix}50 & 30\\
+30 & 50
+\end{matrix}\right]
+\]
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Let's find 
+\begin_inset Formula $AA^{T}$
+\end_inset
+
+ eigenvalues by solving 
+\begin_inset Formula 
+\[
+det\left(AA^{T}-\lambda I\right)=0
+\]
+
+\end_inset
+
+
+\begin_inset Formula $det\left(\left[\begin{matrix}50-\lambda & 30\\
+30 & 50-\lambda
+\end{matrix}\right]\right)=\left(50-\lambda\right)^{2}-30^{2}=0\Rightarrow50^{2}-2\cdot50\lambda+\lambda^{2}-30^{2}\Rightarrow\lambda^{2}-100\lambda+1600$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\lambda_{1}=80\,,\,\lambda_{2}=20\Rightarrow\sigma_{1}=\sqrt{80},\sigma_{2}=\sqrt{20}
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\left[\begin{matrix}50-80 & 30\\
+30 & 50-80
+\end{matrix}\right]\left[\begin{matrix}u_{11}\\
+u_{12}
+\end{matrix}\right]=\left[\begin{matrix}0\\
+0
+\end{matrix}\right]\Rightarrow-30u_{11}+30u_{22}=0\Rightarrow u_{11}=u_{22},u_{1}=\frac{1}{\sqrt{2}}\left[\begin{matrix}1\\
+1
+\end{matrix}\right]
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\left[\begin{matrix}50-20 & 30\\
+30 & 50-20
+\end{matrix}\right]\left[\begin{matrix}u_{21}\\
+u_{22}
+\end{matrix}\right]=\left[\begin{matrix}0\\
+0
+\end{matrix}\right]\Rightarrow30u_{11}+30u_{22}=0\Rightarrow u_{11}=-u_{22},u_{1}=\frac{1}{\sqrt{2}}\left[\begin{matrix}1\\
+-1
+\end{matrix}\right]
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+U=\frac{1}{\sqrt{2}}\left[\begin{matrix}1 & 1\\
+1 & -1
+\end{matrix}\right]
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+A=U\Sigma V^{T}\Rightarrow U^{T}A=\Sigma V^{T}
+\]
+
+\end_inset
+
+therefore the i'th row of 
+\begin_inset Formula $\Sigma V^{T}$
+\end_inset
+
+ is 
+\begin_inset Formula $\sigma_{i}v_{i}$
+\end_inset
+
+ and is equal the the i'th row of 
+\begin_inset Formula $U^{T}A$
+\end_inset
+
+ and so 
+\begin_inset Formula 
+\[
+U^{T}A=\frac{1}{\sqrt{2}}\left[\begin{matrix}1 & 1\\
+1 & -1
+\end{matrix}\right]\cdot\left[\begin{matrix}5 & 5\\
+-1 & 7
+\end{matrix}\right]=\frac{1}{\sqrt{2}}\left[\begin{matrix}4 & 12\\
+6 & -2
+\end{matrix}\right]
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\sigma_{1}v_{1}=\frac{1}{\sqrt{2}}\left[\begin{matrix}4\\
+12
+\end{matrix}\right]\Rightarrow v_{1}=\frac{4}{\sqrt{160}}\left[\begin{matrix}1\\
+3
+\end{matrix}\right]\Rightarrow v_{1}=\frac{1}{\sqrt{10}}\left[\begin{matrix}1\\
+3
+\end{matrix}\right]
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\sigma_{2}v_{2}=\frac{1}{\sqrt{2}}\left[\begin{matrix}6\\
+-2
+\end{matrix}\right]\Rightarrow v_{2}=\frac{2}{\sqrt{40}}\left[\begin{matrix}3\\
+-1
+\end{matrix}\right]\Rightarrow v_{2}=\frac{1}{\sqrt{10}}\left[\begin{matrix}3\\
+-1
+\end{matrix}\right]
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+A=U\Sigma V^{T},U=\frac{1}{\sqrt{2}}\left[\begin{matrix}1 & 1\\
+1 & -1
+\end{matrix}\right],\Sigma=\left[\begin{matrix}\sqrt{80} & 0\\
+0 & \sqrt{20}
+\end{matrix}\right],V=\frac{1}{\sqrt{10}}\left[\begin{matrix}1 & 3\\
+3 & -1
+\end{matrix}\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Image Compression
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+10.
+\end_layout
+
+\end_inset
+
+The requested graphs:
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Image Compression/Frobenius Distance VS k Value.png
+	lyxscale 25
+	scale 50
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename Image Compression/Compression Ratio VS k Value.png
+	lyxscale 25
+	scale 50
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Frobenius Distance and Compression Ratio as a function of k
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+11.
+\end_layout
+
+\end_inset
+
+The requested compressed images:
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "30page%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Image Compression/Compressed Image - k value- 255 - distance - 874.705229146026 - compression ratio - 0.498046875
+	scale 30
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+k value - 255 - 
+\begin_inset Newline newline
+\end_inset
+
+Distance - 874.705229146026 - 
+\begin_inset Newline newline
+\end_inset
+
+Compression ratio - 0.498046875
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "30col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Image Compression/Compressed Image - k value- 127 - distance - 2851.5390926867926 - compression ratio - 0.248046875
+	scale 30
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+k value- 127 - 
+\begin_inset Newline newline
+\end_inset
+
+Distance - 2851.5390926867926 -
+\begin_inset Newline newline
+\end_inset
+
+Compression Ratio - 0.248046875
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "30page%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Image Compression/Compressed Image - k value- 65 - distance - 5329.527209019887 - compression ratio - 0.126953125
+	scale 30
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+k value- 65 -
+\begin_inset Newline newline
+\end_inset
+
+Distance - 5329.527209019887 - 
+\begin_inset Newline newline
+\end_inset
+
+Compression Ratio - 0.126953125
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "30col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Image Compression/Compressed Image - k value- 31 - distance - 8545.535813063298 - compression ratio - 0.060546875
+	scale 30
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+k value- 31 -
+\begin_inset Newline newline
+\end_inset
+
+Distance - 8545.535813063298-
+\begin_inset Newline newline
+\end_inset
+
+Compression Ratio - 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "30page%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Image Compression/Compressed Image - k value- 15 - distance - 11992.603198688876 - compression ratio - 0.029296875
+	scale 30
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+k value- 65 -
+\begin_inset Newline newline
+\end_inset
+
+Distance - 5329.527209019887 - 
+\begin_inset Newline newline
+\end_inset
+
+Compression Ratio - 0.126953125
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+12.
+\end_layout
+
+\end_inset
+
+From the compression ratio graph we see that the compression ratio is linear
+ in the number k and this is expected since each singular value we remove
+ takes up the same space.
+ 
+\begin_inset Newline newline
+\end_inset
+
+From the frobenius distance graph we learn that the distance decreases very
+ quickly when increasing the k value near 0 but then at some point of the
+ graph the distance almost doesn't change as we increase k values.
+\begin_inset Newline newline
+\end_inset
+
+This means that the first singular values hold most of the image data and
+ the higher ones hold almost no data.
+\end_layout
+
+\begin_layout Part*
+Linear Regression
+\end_layout
+
+\begin_layout Section*
+Theory: Normal Equations
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+13.
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+14.
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\underline{Im(X^{T})\subseteq Ker(X)^{\perp}:}$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Let 
+\begin_inset Formula $v\in Im(X^{T})$
+\end_inset
+
+ therefore 
+\begin_inset Formula $\exists w$
+\end_inset
+
+ s.t.
+ 
+\begin_inset Formula $X^{T}w=v$
+\end_inset
+
+.
+ Now let 
+\begin_inset Formula $u\in Ker(X)$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\left\langle u,v\right\rangle =\left\langle u,X^{T}w\right\rangle =\left\langle Xu,w\right\rangle =\left\langle 0,w\right\rangle =0
+\]
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\underline{Ker(X)^{\perp}\subseteq Im(X^{T}):}$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Let 
+\begin_inset Formula $v\in Ker(X)^{\perp}$
+\end_inset
+
+.
+ Suppose, by contradiction, that 
+\begin_inset Formula $v\notin Im(X^{T})$
+\end_inset
+
+ then there exists a 
+\begin_inset Formula $v'\in Im\left(X^{T}\right)^{\perp}$
+\end_inset
+
+ such that 
+\begin_inset Formula $\text{\left\langle v,v'\right\rangle ≠0}$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Since 
+\begin_inset Formula $X^{T}Xv'\in Im(X^{T})$
+\end_inset
+
+ we get that 
+\begin_inset Formula $v'\in Ker(X)$
+\end_inset
+
+.
+ Therefore 
+\begin_inset Formula 
+\[
+\left\langle Xv',Xv'\right\rangle =\left\langle v',X^{T}Xv'\right\rangle =0\Rightarrow Xv'=0\Rightarrow v\notin\left(KerX\right)^{\perp}
+\]
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+In contradiction.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+15.
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $X^{T}w=y$
+\end_inset
+
+ , 
+\begin_inset Formula $X^{T}$
+\end_inset
+
+ is not invertible
+\begin_inset Newline newline
+\end_inset
+
+The system has 
+\begin_inset Formula $\infty$
+\end_inset
+
+solutions iff Ker
+\begin_inset Formula $\left(X^{T}\right)$
+\end_inset
+
+ is non trivial, i.e.
+ it contains more than the 0 vector.
+ 
+\begin_inset Newline newline
+\end_inset
+
+Denote one solution of the system as 
+\begin_inset Formula $w_{1}$
+\end_inset
+
+.
+ All other solutions can be represented as 
+\begin_inset Formula $w_{1}+w_{2}$
+\end_inset
+
+ where 
+\begin_inset Formula $w_{2}\in Ker(X^{T})$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+X^{T}\left(w_{1}+w_{2}\right)=y
+\]
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Let 
+\begin_inset Formula $v\in Ker\left(X\right)$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+v^{T}X^{T}\left(w_{1}+w_{2}\right)=v^{T}y\Rightarrow\left(Xv\right)^{T}\left(w_{1}+w_{2}\right)=v^{T}y
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\Downarrow
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+v^{T}y=0\Rightarrow y\in Ker(X)^{\perp}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+16.
+\end_layout
+
+\end_inset
+
+Consider the Normal linear system 
+\begin_inset Formula 
+\[
+XX^{T}w=Xy
+\]
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+If 
+\begin_inset Formula $XX^{T}$
+\end_inset
+
+ is invertible than 
+\begin_inset Formula 
+\[
+w=Xy\left(XX^{T}\right)^{-1}
+\]
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+If 
+\begin_inset Formula $XX^{T}$
+\end_inset
+
+ is uninvertible than according to article 15 the system 
+\begin_inset Formula 
+\[
+XX^{T}w=Xy
+\]
+
+\end_inset
+
+has 
+\begin_inset Formula $\infty$
+\end_inset
+
+ solutions iff 
+\begin_inset Formula $Xy\perp Ker\left(XX^{T}\right)$
+\end_inset
+
+ iff 
+\begin_inset Formula $Xy\perp Ker\left(X^{T}\right)$
+\end_inset
+
+ since 
+\begin_inset Formula $Ker\left(X^{T}\right)=Ker\left(XX^{T}\right)$
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+Let 
+\begin_inset Formula $u\in Ker\left(X^{T}\right)$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\left\langle Xy,u\right\rangle =\left\langle y,X^{T}u\right\rangle =\left\langle y,0\right\rangle =0
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\Downarrow
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+Xy\perp Ker\left(X^{T}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Price Prediction
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+17.
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+I filtered any rows that have 
+\series bold
+ANY 
+\series default
+null values.
+\end_layout
+
+\begin_layout Enumerate
+I defined all features that must be positive and all features that must
+ be non-negative and filtered any rows that break any of these constraints.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Tabular
+<lyxtabular version="3" rows="18" columns="3">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Feature
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+constraint
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Reasoning
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+bedrooms
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+non-negative
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Houses can have 0 bedrooms
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+bathrooms
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+non-negative
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Houses can have 0 bathrooms
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+waterfront
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+non-negative
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+view
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+non-negative
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+sqft_above
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+non-negative
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+sqft_basement
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+non-negative
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+yr_built
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+non-negative
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+yr_renovated
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+non-negative
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+zipcode
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+non-negative
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+sqft_living15
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+non-negative
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+sqft_lot15
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+non-negative
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+price
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+positive
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+sqft_living
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+positive
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+sqft_lot
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+positive
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+floors
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+positive
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+condition
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+positive
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+grade
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+positive
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+I removed the id column as it cannot have any possible influence on the
+ house price.
+\end_layout
+
+\begin_layout Enumerate
+I added the interceptor feature.
+\end_layout
+
+\begin_layout Enumerate
+I removed the langtitude and longtitude features since I think the zipcode
+ feature gives some information regarding the house location's influence
+ on the price.
+\begin_inset Newline newline
+\end_inset
+
+This is, however one area where I would invest more time if I had any to
+ get better performance.
+ I would unite these two features into a quantized feature of location and
+ assume there is some linear relation between these locations and the house
+ price.
+\end_layout
+
+\begin_layout Enumerate
+Regarding the date-time feature, I converted it to a number simply by taking
+ the string representing the date (throwing the time since it is 0 for all
+ samples) and converting it to a number.
+ i.e '20140512T000000' is converted into
+\series bold
+ 
+\series default
+20140512.
+\begin_inset Newline newline
+\end_inset
+
+The results with this date feature and without the date feature altogether
+ do not seems to be distinctivly different.
+\begin_inset Newline newline
+\end_inset
+
+Here, there is also extra work that can be done using the date feature,
+ I would perhaps try to remove the day from the date and keep only the year
+ and month, then trasform this feature to a one hot encoding feature.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+18.
+\end_layout
+
+\end_inset
+
+I converted only the zip code feature to one hot encoded features, I did
+ that using pandas get_dummies function.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+19.
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+20.
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+21.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Part*
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Price Prediction/Training and Test MSE VS Percentage of samples in Training Set -with date feature.png
+	scale 50
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Training and Test MSE VS Training Samples Percentage - with date feature
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Price Prediction/Training and Test MSE VS Percentage of samples in Training Set -without date feature.png
+	scale 50
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Training and Test MSE VS Training Samples Percentage - with date feature
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Part*
+Concentration Inequalities
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+22.
+\end_layout
+
+\end_inset
+
+Chebyshev's inequality: The sample complexity is bounded above by 
+\begin_inset Formula $m\left(\epsilon,\delta\right)\leq\lceil\frac{1}{4\epsilon^{2}}\cdot\frac{1}{\delta}\rceil$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Hoeffding's inequality: The sample complexity is bounded above by 
+\begin_inset Formula $m\left(\epsilon,\delta\right)\leq\lceil\frac{1}{2\epsilon^{2}}\cdot log\left(\frac{2}{\delta}\right)\rceil$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+23.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Concentration Inequalities/a.png
+	scale 70
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+5 Coin toss Sequences and their mean taken on first m tosses
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+I expect to see that as we increase m we get closer and closer to the true
+ bias of the coin p=0.25 as is indeed the case for all 5 sequences.
+\end_layout
+
+\begin_layout Enumerate
+Following are the figures of the probability upper bounds
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "40col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Concentration Inequalities/article_b_epsilon=0_5.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "40col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Concentration Inequalities/Percentage_epsilon=0_5.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Concentration Inequalities/article_b_epsilon=0_25.png
+	scale 70
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Concentration Inequalities/article_b_epsilon=0_1.png
+	scale 70
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Concentration Inequalities/article_b_epsilon=0_01.png
+	scale 70
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "100col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Concentration Inequalities/article_b_epsilon=0_001.png
+	scale 70
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+I expect the that the percentage of sequences that satisfy having a distance
+ of mean to expectation greater than 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+ will decrease as m increases.
+ This is because at a fixed 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+ the probability of a sequence having a distance of mean to expectation
+ smaller than 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+ gets closer to 1 as m increases.
+\begin_inset Newline newline
+\end_inset
+
+Following are the figures of percentage of out of bounds sequences VS m:
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_body
+\end_document

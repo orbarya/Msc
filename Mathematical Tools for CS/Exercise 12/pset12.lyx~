@@ -1,0 +1,593 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Enumerate
+Let 
+\begin_inset Formula $P\subseteq\mathbb{R}^{d}$
+\end_inset
+
+ be a polytope defined by 
+\begin_inset Formula $Ax\leq b.$
+\end_inset
+
+ Let 
+\begin_inset Formula $a_{1},...,a_{m}$
+\end_inset
+
+ be the rows of A, and b=
+\begin_inset Formula $\left(b_{1},...,b_{m}\right)$
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+Let 
+\begin_inset Formula $x\in P$
+\end_inset
+
+ , 
+\begin_inset Formula $I(x)=\left\{ i\in[m]:\left\langle a_{i},x\right\rangle <b_{i}\right\} $
+\end_inset
+
+, let's denote 
+\begin_inset Formula $\triangle_{min}=min\left\{ \frac{b_{i}-\left\langle a_{i},x\right\rangle }{\left\Vert a_{i}\right\Vert }\mid i\in I(x)\right\} $
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+Take 
+\begin_inset Formula $\epsilon=\triangle_{min}$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $y\in B_{\epsilon}(x)$
+\end_inset
+
+ in some norm of 
+\begin_inset Formula $\mathbb{R}^{d}.$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\left|\left\Vert x\right\Vert -\left\Vert y\right\Vert \right|\leq\left\Vert y-x\right\Vert \leq\triangle_{min}\leq
+\]
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+For all 
+\begin_inset Formula $i\in[m]:$
+\end_inset
+
+
+\begin_inset Formula $\left\Vert a_{i}\right\Vert \triangle_{min}\geq\left\Vert a_{i}\right\Vert \left\Vert y-x\right\Vert \geq\left\langle a_{i},y-x\right\rangle =\left\langle a_{i},y\right\rangle -\left\langle a_{i},x\right\rangle \geq\left\langle a_{i},y\right\rangle -\triangle_{min}$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\left\langle a_{i},y\right\rangle =\left\langle a_{i},x+y-x\right\rangle \leq\left\langle a_{i},x\right\rangle +\left\langle a_{i},y-x\right\rangle \leq\left\langle a_{i},x\right\rangle +\left\Vert a_{i}\right\Vert \left\Vert y-x\right\Vert \leq\left\langle a_{i},x\right\rangle +\left\Vert a_{i}\right\Vert \frac{b_{i}-\left\langle a_{i},x\right\rangle }{\left\Vert a_{i}\right\Vert }=\left\langle a_{i},x\right\rangle +b_{i}-\left\langle a_{i},x\right\rangle =b_{i}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Let 
+\begin_inset Formula $P\subseteq\mathbb{R}^{d}$
+\end_inset
+
+ be a polytope, suppose that P is defined by 
+\begin_inset Formula $Ax\leq b.$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Assume that (a) holds - 
+\begin_inset Formula $x\in P$
+\end_inset
+
+ is a vertex of P and let's show that (b) holds.
+ Since x is a vertex of P there exists some linear functional that x is
+ it's unique maximizer :
+\begin_inset Formula 
+\[
+f(y)=\left\langle c,y\right\rangle ,\,\,\underset{y\in P}{argmax}f(y)=x,\,\,f(x)=f_{max}
+\]
+
+\end_inset
+
+Suppose, by contradiction, that 
+\begin_inset Formula $\exists0\neq v\in\mathbb{R}^{d}$
+\end_inset
+
+ such that 
+\begin_inset Formula $x+v\in P$
+\end_inset
+
+ and 
+\begin_inset Formula $x-v\in P$
+\end_inset
+
+.
+\begin_inset Newline linebreak
+\end_inset
+
+
+\begin_inset Formula $\left\langle c,x+v\right\rangle =\left\langle c,x\right\rangle +\left\langle c,v\right\rangle $
+\end_inset
+
+ If 
+\begin_inset Formula $\left\langle c,v\right\rangle \geq0\Rightarrow\left\langle c,x\right\rangle +\left\langle c,v\right\rangle \geq\left\langle c,x\right\rangle $
+\end_inset
+
+ and so either x is not the maximizer or it's not a unique maximizer of
+ f(y).
+\begin_inset Newline newline
+\end_inset
+
+If 
+\begin_inset Formula $\left\langle c,v\right\rangle <0\Rightarrow-\left\langle c,v\right\rangle >0$
+\end_inset
+
+ and so 
+\begin_inset Formula $\left\langle c,x-v\right\rangle =\left\langle c,x\right\rangle +\left\langle c,-v\right\rangle =\left\langle c,x\right\rangle -\left\langle c,v\right\rangle >\left\langle c,x\right\rangle $
+\end_inset
+
+ and again x is not the maximizer of f(y) on P, in contradiction.
+\end_layout
+
+\begin_layout Enumerate
+Assume that (b) holds : For every 
+\begin_inset Formula $0\neq v\in\mathbb{R}^{d}$
+\end_inset
+
+ either 
+\begin_inset Formula $x+v\notin P$
+\end_inset
+
+ or 
+\begin_inset Formula $x-v\notin P$
+\end_inset
+
+ or both.
+ Let's show that (a) holds:
+\begin_inset Newline newline
+\end_inset
+
+Consider the linear functional 
+\begin_inset Formula $f(x)=\left\langle \underset{i\in[m]\backslash I(x)}{\sum}a_{i},x\right\rangle .$
+\end_inset
+
+Suppose, by contradiction, that x is not it's unique maximizer on P, then
+ there exists some 
+\begin_inset Formula $v'\in\mathbb{R}^{d}$
+\end_inset
+
+ such that 
+\begin_inset Formula $x+v'\in P$
+\end_inset
+
+ and such that 
+\begin_inset Formula $f(x)\leq f(x+v')=\left\langle \underset{i\in[m]\backslash I(x)}{\sum}a_{i},x+v'\right\rangle \Rightarrow$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\underset{i\in[m]\backslash I(x)}{\sum}\left\langle a_{i},x\right\rangle \leq\underset{i\in[m]\backslash I(x)}{\sum}\left(\left\langle a_{i},x\right\rangle +\left\langle a_{i},v'\right\rangle \right)\Rightarrow\sum\left\langle a_{i},v'\right\rangle \geq0
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+x+v'\in P\Rightarrow A(x+v')\leq b\Rightarrow\forall1\leq i\leq d\,\,\,\,\,a_{i}x+a_{i}v'\leq b_{i}
+\]
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset Formula $\forall1\leq i\leq d\,\,\,x\in P\Rightarrow a_{i}x\leq b_{i}$
+\end_inset
+
+ and since 
+\begin_inset Formula $\sum\left\langle a_{i},v'\right\rangle \geq0$
+\end_inset
+
+ we can zero every coordinate of v' such that 
+\begin_inset Formula $a_{i}v'<0$
+\end_inset
+
+ and we will get a vector with only non-negative coordinates, lets denote
+ it 
+\begin_inset Formula $v$
+\end_inset
+
+.
+ 
+\begin_inset Formula $x+v\in P$
+\end_inset
+
+ since for all coordinates we have zeroed out the condition that is required
+ for 
+\begin_inset Formula $x+v$
+\end_inset
+
+ to be in P is 
+\begin_inset Formula $a_{i}x\leq b_{i}$
+\end_inset
+
+ which holds since 
+\begin_inset Formula $x\in P.$
+\end_inset
+
+ For coordinates we haven't zeroed the condition 
+\begin_inset Formula $a_{i}x+a_{i}v'\leq b_{i}$
+\end_inset
+
+ still holds.
+ The vector 
+\begin_inset Formula $x-v$
+\end_inset
+
+ is also in P since 
+\begin_inset Formula $\forall1\leq i\leq d\,\,\,\,\,a_{i}x-a_{i}v\leq a_{i}x+a_{i}v\leq b_{i}$
+\end_inset
+
+.
+ In contradiction to the assumption.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Let 
+\begin_inset Formula $G=(V,E)$
+\end_inset
+
+ be a graph.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Let's denote the vertices of G as 
+\begin_inset Formula $v_{i}\,\,1\leq i\leq\left|V\right|$
+\end_inset
+
+.
+ 
+\begin_inset Newline newline
+\end_inset
+
+Define the vector x of size
+\begin_inset Formula $\left|V\right|$
+\end_inset
+
+ 
+\begin_inset Formula $x_{i}=\begin{cases}
+1 & v_{i}\in C\\
+0 & v_{i}\notin C
+\end{cases}$
+\end_inset
+
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $m=\begin{matrix}min\, & \boldsymbol{\vec{1}}\cdot x\\
+s.t. & x_{i}\in\left\{ 0,1\right\} \\
+ & \text{for each \ensuremath{v_{i}v_{j}\in E},\ensuremath{x_{i}+x_{j}\geq1}}
+\end{matrix}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+The functions 
+\begin_inset Formula $f:V\rightarrow\left\{ 0,1\right\} $
+\end_inset
+
+ such that for each 
+\begin_inset Formula $v_{i}v_{j}\in E,f(v_{i})+f(v_{j})\geq1$
+\end_inset
+
+ are a subset of the fractional vertex cover.
+\begin_inset Newline newline
+\end_inset
+
+Therefore The minimum weight of the functions 
+\begin_inset Formula $f:V\rightarrow\left\{ 0,1\right\} $
+\end_inset
+
+,
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\,s.t.\,\,v_{i}v_{j}\in E,f(v_{i})+f(v_{j})\geq1$
+\end_inset
+
+, let's call it: r, is smaller or equal to the minimum weight of the fractional
+ vertex cover 
+\begin_inset Formula $m^{*}$
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $r=\begin{matrix}min\, & \sum f(v_{i})\\
+s.t.\\
+ & \text{for each \ensuremath{v_{i}v_{j}\in E,\,f(v_{i})+f(v_{j})\geq1}}
+\end{matrix}$
+\end_inset
+
+ 
+\begin_inset Newline newline
+\end_inset
+
+If we denote the vector x to be f over all all vertices of G : 
+\begin_inset Formula $x=f(V)$
+\end_inset
+
+ then : 
+\begin_inset Formula $\begin{matrix}min\, & \sum f(v_{i})\\
+s.t.\\
+ & \text{for each \ensuremath{v_{i}v_{j}\in E,\,f(v_{i})+f(v_{j})\geq1}}
+\end{matrix}=\begin{matrix}min\, & \boldsymbol{\vec{1}}\cdot x\\
+s.t. & x_{i}\in\left\{ 0,1\right\} \\
+ & \text{for each \ensuremath{v_{i}v_{j}\in E,\,x_{i}+x_{j}\geq1}}
+\end{matrix}=m$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+and so we get that 
+\begin_inset Formula $m^{*}\leq m$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $m^{*}=\begin{matrix}min\, & \boldsymbol{\vec{1}}\cdot x\\
+s.t. & x_{i}\geq0\\
+ & \text{for each \ensuremath{v_{i}v_{j}\in E},\ensuremath{\,x_{i}+x_{j}\geq1}}
+\end{matrix}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Algorithm for finding a 2m vertex cover:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Solve the LP that gives us 
+\begin_inset Formula $m^{*}$
+\end_inset
+
+and denote it's argmin as 
+\begin_inset Formula $x^{*}$
+\end_inset
+
+ .
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $x_{i}=\begin{cases}
+1 & x_{i}^{*}\geq0.5\\
+0 & x_{i}^{*}<0.5
+\end{cases}$
+\end_inset
+
+,
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+claim: x is a vertex cover of size at most 2m.
+\begin_inset Newline newline
+\end_inset
+
+It is a vertex cover since for each edge 
+\begin_inset Formula $v_{i}v_{j}\in E$
+\end_inset
+
+ 
+\begin_inset Formula $x_{i}^{*}+x_{j}^{*}\geq1$
+\end_inset
+
+ , therefore at least one of 
+\begin_inset Formula $x_{i}^{*}$
+\end_inset
+
+ and 
+\begin_inset Formula $x_{j}^{*}$
+\end_inset
+
+ are at least 0.5 and so at least one of 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ and 
+\begin_inset Formula $x_{j}$
+\end_inset
+
+ are 1.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $m\geq m^{*}=\sum_{i=1}^{\left|V\right|}x_{i}^{*}$
+\end_inset
+
+.
+ 
+\begin_inset Newline newline
+\end_inset
+
+Since for each coordinate of 
+\begin_inset Formula $x^{*}$
+\end_inset
+
+ at the very most we have multiplied it by 2 then the size of the provided
+ vertex cover by the algorithm is : 
+\begin_inset Formula $\sum_{i=1}^{\left|V\right|}x_{i}\leq\sum_{i=1}^{\left|V\right|}2x_{i}^{*}=2m^{*}\leq2m.$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+Let 
+\begin_inset Formula $x\in conv(S)$
+\end_inset
+
+ therefore 
+\begin_inset Formula $x=\alpha_{1}s_{1}+...+\alpha_{k}s_{k}$
+\end_inset
+
+ such that 
+\begin_inset Formula $\alpha_{i}\geq0,\,\sum_{i=1}^{k}\alpha_{k}=1$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+If 
+\begin_inset Formula $k\leq d+1$
+\end_inset
+
+ then we are done.
+ Suppose 
+\begin_inset Formula $k>d+1$
+\end_inset
+
+ then 
+\begin_inset Formula $s_{1},...s_{k}$
+\end_inset
+
+ are linearly dependant and so :
+\begin_inset Newline newline
+\end_inset
+
+Therefore 
+\begin_inset Formula $s_{2}-s_{1},...,s_{k}-s_{1}$
+\end_inset
+
+ are also linearly dependant
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\begin{matrix}\underset{x}{min} & \boldsymbol{1}\\
+s.t. & \forall1\leq i\leq n,\,\,\,0\leq a_{i}\leq1\\
+ & a^{T}v=x
+\end{matrix}$
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

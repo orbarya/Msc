@@ -1,10 +1,13 @@
-#LyX 2.2 created this file. For more info see http://www.lyx.org/
-\lyxformat 508
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
 \begin_document
 \begin_header
 \save_transient_properties true
 \origin unavailable
 \textclass article
+\begin_preamble
+\usepackage{enumitem}
+\end_preamble
 \use_default_options true
 \maintain_unincluded_children false
 \language english
@@ -21,11 +24,14 @@
 \font_osf false
 \font_sf_scale 100 100
 \font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
 \graphics default
 \default_output_format default
 \output_sync 0
 \bibtex_command default
 \index_command default
+\float_placement H
 \paperfontsize default
 \spacing single
 \use_hyperref false
@@ -50,6 +56,7 @@
 \suppress_date false
 \justification true
 \use_refstyle 1
+\use_minted 0
 \index Index
 \shortcut idx
 \color #008000
@@ -58,7 +65,10 @@
 \tocdepth 3
 \paragraph_separation indent
 \paragraph_indentation default
-\quotes_language english
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
 \papercolumns 1
 \papersides 1
 \paperpagestyle default
@@ -70,6 +80,14 @@
 \end_header
 
 \begin_body
+
+\begin_layout Part*
+SVD
+\end_layout
+
+\begin_layout Section*
+Theory
+\end_layout
 
 \begin_layout Enumerate
 \begin_inset ERT
@@ -679,24 +697,55 @@ A=U\Sigma V^{T},U=\frac{1}{\sqrt{2}}\left[\begin{matrix}1 & 1\\
 \end_inset
 
 
-\begin_inset Newline newline
+\end_layout
+
+\begin_layout Section*
+Image Compression
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+10.
+\end_layout
+
 \end_inset
 
-Following is the code for Image Compression exercise:
-\begin_inset Newline newline
+The requested graphs:
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Image Compression/Frobenius Distance VS k Value.png
+	lyxscale 25
+	scale 50
+
 \end_inset
 
 
-\begin_inset External
-	template PDFPages
-	filename C:/Users/Administrator/Downloads/compression/1_PDFsam_Image Compression (2).pdf
+\begin_inset Graphics
+	filename Image Compression/Compression Ratio VS k Value.png
+	lyxscale 25
+	scale 50
 
 \end_inset
 
 
-\begin_inset External
-	template PDFPages
-	filename C:/Users/Administrator/Downloads/compression/2_PDFsam_Image Compression (2).pdf
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Frobenius Distance and Compression Ratio as a function of k
+\end_layout
+
+\end_inset
+
+
+\end_layout
 
 \end_inset
 
@@ -704,23 +753,289 @@ Following is the code for Image Compression exercise:
 \end_layout
 
 \begin_layout Enumerate
-Requested graphs :
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+11.
+\end_layout
+
+\end_inset
+
+The requested compressed images:
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "30page%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Image Compression/Compressed Image - k value- 255 - distance - 874.705229146026 - compression ratio - 0.498046875
+	scale 30
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+k value - 255 - 
+\begin_inset Newline newline
+\end_inset
+
+Distance - 874.705229146026 - 
+\begin_inset Newline newline
+\end_inset
+
+Compression ratio - 0.498046875
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "30col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Image Compression/Compressed Image - k value- 127 - distance - 2851.5390926867926 - compression ratio - 0.248046875
+	scale 30
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+k value- 127 - 
+\begin_inset Newline newline
+\end_inset
+
+Distance - 2851.5390926867926 -
+\begin_inset Newline newline
+\end_inset
+
+Compression Ratio - 0.248046875
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \begin_inset Newline newline
 \end_inset
 
 
-\begin_inset External
-	template PDFPages
-	filename C:/Users/Administrator/Downloads/compression/9_PDFsam_Image Compression (2).pdf
-	scale 50
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "30page%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Image Compression/Compressed Image - k value- 65 - distance - 5329.527209019887 - compression ratio - 0.126953125
+	scale 30
 
 \end_inset
 
 
-\begin_inset External
-	template PDFPages
-	filename C:/Users/Administrator/Downloads/compression/10_PDFsam_Image Compression (2).pdf
-	scale 50
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+k value- 65 -
+\begin_inset Newline newline
+\end_inset
+
+Distance - 5329.527209019887 - 
+\begin_inset Newline newline
+\end_inset
+
+Compression Ratio - 0.126953125
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "30col%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Image Compression/Compressed Image - k value- 31 - distance - 8545.535813063298 - compression ratio - 0.060546875
+	scale 30
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+k value- 31 -
+\begin_inset Newline newline
+\end_inset
+
+Distance - 8545.535813063298-
+\begin_inset Newline newline
+\end_inset
+
+Compression Ratio - 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Box Frameless
+position "t"
+hor_pos "c"
+has_inner_box 1
+inner_pos "t"
+use_parbox 0
+use_makebox 0
+width "30page%"
+special "none"
+height "1in"
+height_special "totalheight"
+thickness "0.4pt"
+separation "3pt"
+shadowsize "4pt"
+framecolor "black"
+backgroundcolor "none"
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Image Compression/Compressed Image - k value- 15 - distance - 11992.603198688876 - compression ratio - 0.029296875
+	scale 30
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+k value- 65 -
+\begin_inset Newline newline
+\end_inset
+
+Distance - 5329.527209019887 - 
+\begin_inset Newline newline
+\end_inset
+
+Compression Ratio - 0.126953125
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
 
 \end_inset
 
@@ -728,49 +1043,15 @@ Requested graphs :
 \end_layout
 
 \begin_layout Enumerate
-\begin_inset External
-	template PDFPages
-	filename C:/Users/Administrator/Downloads/compression/4_PDFsam_Image Compression (2).pdf
-	scale 50
+\begin_inset Argument item:1
+status open
 
-\end_inset
-
-
-\begin_inset External
-	template PDFPages
-	filename C:/Users/Administrator/Downloads/compression/5_PDFsam_Image Compression (2).pdf
-	scale 50
-
-\end_inset
-
-
-\begin_inset External
-	template PDFPages
-	filename C:/Users/Administrator/Downloads/compression/6_PDFsam_Image Compression (2).pdf
-	scale 50
-
-\end_inset
-
-
-\begin_inset External
-	template PDFPages
-	filename C:/Users/Administrator/Downloads/compression/7_PDFsam_Image Compression (2).pdf
-	scale 50
-
-\end_inset
-
-
-\begin_inset External
-	template PDFPages
-	filename C:/Users/Administrator/Downloads/compression/8_PDFsam_Image Compression (2).pdf
-	scale 50
-
-\end_inset
-
-
+\begin_layout Plain Layout
+12.
 \end_layout
 
-\begin_layout Enumerate
+\end_inset
+
 From the compression ratio graph we see that the compression ratio is linear
  in the number k and this is expected since each singular value we remove
  takes up the same space.
@@ -785,11 +1066,28 @@ From the frobenius distance graph we learn that the distance decreases very
 \end_inset
 
 This means that the first singular values hold most of the image data and
- the higher ones almost no data.
- 
+ the higher ones hold almost no data.
+\end_layout
+
+\begin_layout Part*
+Linear Regression
+\end_layout
+
+\begin_layout Section*
+Theory: Normal Equations
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+13.
+\end_layout
+
+\end_inset
+
+
 \begin_inset ERT
 status open
 
@@ -804,6 +1102,16 @@ status open
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+14.
+\end_layout
+
+\end_inset
+
+
 \begin_inset Formula $\underline{Im(X^{T})\subseteq Ker(X)^{\perp}:}$
 \end_inset
 
@@ -863,7 +1171,7 @@ Let
 \end_inset
 
  such that 
-\begin_inset Formula $\text{\left\langle v,v'\right\rangle \neq0}$
+\begin_inset Formula $\text{\left\langle v,v'\right\rangle ≠0}$
 \end_inset
 
 
@@ -895,6 +1203,16 @@ In contradiction.
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+15.
+\end_layout
+
+\end_inset
+
+
 \begin_inset Formula $X^{T}w=y$
 \end_inset
 
@@ -977,6 +1295,15 @@ v^{T}y=0\Rightarrow y\in Ker(X)^{\perp}
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+16.
+\end_layout
+
+\end_inset
+
 Consider the Normal linear system 
 \begin_inset Formula 
 \[
@@ -1068,5 +1395,1075 @@ Xy\perp Ker\left(X^{T}\right)
 
 \end_layout
 
+\begin_layout Section*
+Price Prediction
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+17.
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+I filtered any rows that have 
+\series bold
+ANY 
+\series default
+null values.
+\end_layout
+
+\begin_layout Enumerate
+I defined all features that must be positive and all features that must
+ be non-negative and filtered any rows that break any of these constraints.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Tabular
+<lyxtabular version="3" rows="18" columns="3">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Feature
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+constraint
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Reasoning
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+bedrooms
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+non-negative
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Houses can have 0 bedrooms
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+bathrooms
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+non-negative
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Houses can have 0 bathrooms
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+waterfront
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+non-negative
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+view
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+non-negative
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+sqft_above
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+non-negative
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+sqft_basement
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+non-negative
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+yr_built
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+non-negative
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+yr_renovated
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+non-negative
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+zipcode
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+non-negative
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+sqft_living15
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+non-negative
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+sqft_lot15
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+non-negative
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+price
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+positive
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+sqft_living
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+positive
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+sqft_lot
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+positive
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+floors
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+positive
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+condition
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+positive
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+grade
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+positive
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+I removed the id column as it cannot have any possible influence on the
+ house price.
+\end_layout
+
+\begin_layout Enumerate
+I added the interceptor feature.
+\end_layout
+
+\begin_layout Enumerate
+I removed the langtitude and longtitude features since I think the zipcode
+ feature gives some information regarding the house location's influence
+ on the price.
+\begin_inset Newline newline
+\end_inset
+
+This is, however one area where I would invest more time if I had any to
+ get better performance.
+ I would unite these two features into a quantized feature of location and
+ assume there is some linear relation between these locations and the house
+ price.
+\end_layout
+
+\begin_layout Enumerate
+Regarding the date-time feature, I converted it to a number simply by taking
+ the string representing the date (throwing the time since it is 0 for all
+ samples) and converting it to a number.
+ i.e '20140512T000000' is converted into
+\series bold
+ 
+\series default
+20140512.
+\begin_inset Newline newline
+\end_inset
+
+The results with this date feature and without the date feature altogether
+ do not seems to be distinctivly different.
+\begin_inset Newline newline
+\end_inset
+
+Here, there is also extra work that can be done using the date feature,
+ I would perhaps try to remove the day from the date and keep only the year
+ and month, then trasform this feature to a one hot encoding feature.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+18.
+\end_layout
+
+\end_inset
+
+I converted only the zip code feature to one hot encoded features, I did
+ that using pandas get_dummies function.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+19.
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+20.
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+21.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Part*
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Price Prediction/Training and Test MSE VS Percentage of samples in Training Set -with date feature.png
+	scale 50
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Training and Test MSE VS Training Samples Percentage - with date feature
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Price Prediction/Training and Test MSE VS Percentage of samples in Training Set -without date feature.png
+	scale 50
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Training and Test MSE VS Training Samples Percentage - with date feature
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Part*
+Concentration Inequalities
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+22.
+\end_layout
+
+\end_inset
+
+Chebyshev's inequality: The sample complexity is bounded above by 
+\begin_inset Formula $m\left(\epsilon,\delta\right)\leq\lceil\frac{1}{4\epsilon^{2}}\cdot\frac{1}{\delta}\rceil$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Hoeffding's inequality: The sample complexity is bounded above by 
+\begin_inset Formula $m\left(\epsilon,\delta\right)\leq\lceil\frac{1}{2\epsilon^{2}}\cdot log\left(\frac{2}{\delta}\right)\rceil$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+23.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Concentration Inequalities/a.png
+	scale 70
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+5 Coin toss Sequences and their mean taken on first m tosses
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+I expect to see that as we increase m we get closer and closer to the true
+ bias of the coin p=0.25 as is indeed the case for all 5 sequences.
+\end_layout
+
+\begin_layout Enumerate
+Following are the figures of the probability upper bounds
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Concentration Inequalities/article_b_epsilon=0_5.png
+	scale 70
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Concentration Inequalities/Percentage_epsilon=0_5.png
+	scale 70
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Concentration Inequalities/article_b_epsilon=0_25.png
+	scale 70
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Concentration Inequalities/Percentage_epsilon=0_25.png
+	scale 70
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Concentration Inequalities/article_b_epsilon=0_1.png
+	scale 70
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Concentration Inequalities/Percentage_epsilon=0_1.png
+	scale 70
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Concentration Inequalities/article_b_epsilon=0_01.png
+	scale 70
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Concentration Inequalities/Percentage_epsilon=0_01.png
+	scale 70
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Concentration Inequalities/article_b_epsilon=0_001.png
+	scale 70
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Concentration Inequalities/Percentage_epsilon=0_001.png
+	scale 70
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+I expect that the percentage of sequences that satisfy having a distance
+ of mean to expectation greater than 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+ will decrease as m increases.
+ This is because at a fixed 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+ the probability of a sequence having a distance of mean to expectation
+ smaller than 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+ gets closer to 1 as m increases.
+\begin_inset Newline newline
+\end_inset
+
+However, as 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+ decreases m will have to be bigger in order to decrease the probability
+ that a sequence has a mean with a distance to the expectation greater than
+ 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+Therefore, as 
+\begin_inset Formula $\epsilon$
+\end_inset
+
+ decreases the percentage of sequences out of bounds will decrease only
+ for greater values of m.
+\end_layout
+
+\end_deeper
 \end_body
 \end_document

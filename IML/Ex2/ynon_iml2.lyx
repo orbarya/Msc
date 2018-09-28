@@ -1,0 +1,470 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+Inon Kaplan 300460094
+\end_layout
+
+\begin_layout Subsubsection*
+q3
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $H$
+\end_inset
+
+ be a not PAC-learnable hypothesis class.
+ Let 
+\begin_inset Formula $A$
+\end_inset
+
+ be an algorithm that always returns the 0-hypothesis, i.e.
+ for any 
+\begin_inset Formula $S\in\chi^{m}$
+\end_inset
+
+
+\begin_inset Formula $A\left(S\right)$
+\end_inset
+
+returns 
+\begin_inset Formula $h$
+\end_inset
+
+ such that 
+\begin_inset Formula $h\left(x\right)=0$
+\end_inset
+
+ for any 
+\begin_inset Formula $x\in\chi$
+\end_inset
+
+.
+ So
+\begin_inset Formula 
+\begin{align*}
+E_{S|x\sim D^{m}}\left[L_{D}\left(A\left(S\right)\right)\right] & =\\
+E_{S|x\sim D^{m}}\left[L_{D}\left(h\right)\right] & =\\
+L_{D}\left(h\right) & =\\
+E_{S|x\sim D^{m}}\left[L_{S}\left(h\right)\right] & =\\
+E_{S|x\sim D^{m}}\left[L_{S}\left(A\left(S\right)\right)\right] & \leq E_{S|x\sim D^{m}}\left[L_{S}\left(A\left(S\right)\right)\right]+\epsilon_{m}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+And thus we have that the condition holds, and the statement is false.
+\end_layout
+
+\begin_layout Subsubsection*
+q4
+\end_layout
+
+\begin_layout Standard
+Notice that 
+\begin_inset Formula 
+\[
+P\left(y|x\right)=\begin{cases}
+1 & f\left(x\right)=y\\
+0 & else
+\end{cases}
+\]
+
+\end_inset
+
+So given 
+\begin_inset Formula $\left(x,y\right)\sim D$
+\end_inset
+
+, 
+\begin_inset Formula 
+\[
+P\left(x,y\right)=P\left(x\right)\cdot P\left(y|x\right)=\begin{cases}
+P\left(x\right) & f\left(x\right)=y\\
+0 & else
+\end{cases}
+\]
+
+\end_inset
+
+So for any 
+\begin_inset Formula $h\in H$
+\end_inset
+
+ 
+\begin_inset Formula 
+\begin{align*}
+L_{D}\left(h\right) & =\\
+D\left(\left\{ \left(x,y\right):h\left(x\right)\neq y\right\} \right) & =\\
+D\left(\left\{ x:h\left(x\right)\neq f\left(x\right)\right\} \right)
+\end{align*}
+
+\end_inset
+
+Which is by definition the generalization error required to show PAC-learnabilit
+y.
+ So given 
+\begin_inset Formula $A$
+\end_inset
+
+ an agnostic learning algorithm for 
+\begin_inset Formula $H$
+\end_inset
+
+ with sample complexity 
+\begin_inset Formula $m\left(\epsilon,\delta\right)$
+\end_inset
+
+, we have 
+\begin_inset Formula 
+\[
+L_{D}\left(A\left(S\right)\right)\leq\min_{h\in H}L_{D}\left(h\right)+\epsilon
+\]
+
+\end_inset
+
+For sample size 
+\begin_inset Formula $\geq m\left(\epsilon,\delta\right)$
+\end_inset
+
+ and security 
+\begin_inset Formula $1-\delta$
+\end_inset
+
+.
+ But under the realizability assumption this amounts to 
+\begin_inset Formula $L_{D}\left(A\left(S\right)\right)\leq\epsilon$
+\end_inset
+
+, and this is exactly the definition for PAC learnability.
+\end_layout
+
+\begin_layout Subsubsection*
+q5
+\end_layout
+
+\begin_layout Paragraph*
+a
+\end_layout
+
+\begin_layout Standard
+Our algorithm 
+\begin_inset Formula $A$
+\end_inset
+
+ will go over all given samples in the input 
+\begin_inset Formula $S=\left\{ \left(x_{i},y_{i}\right)\right\} _{i=1}^{m}$
+\end_inset
+
+ and return an 
+\begin_inset Formula $h\in H$
+\end_inset
+
+ such that if there is some 
+\begin_inset Formula $\left(x,y\right)\in S$
+\end_inset
+
+ with 
+\begin_inset Formula $y=1$
+\end_inset
+
+ then 
+\begin_inset Formula $h=h_{x}$
+\end_inset
+
+ and otherwise 
+\begin_inset Formula $h=h^{-}$
+\end_inset
+
+.
+ It is easy to see this implements the ERM rule since due to the realizability
+ assumption 
+\begin_inset Formula $L_{S}\left(A\left(S\right)\right)=0$
+\end_inset
+
+ for any 
+\begin_inset Formula $S$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph*
+b
+\end_layout
+
+\begin_layout Standard
+Our only chance of failure with the above algorithm is if 
+\begin_inset Formula $f\neq h^{-}$
+\end_inset
+
+, i.e.
+ 
+\begin_inset Formula $f=h_{x}$
+\end_inset
+
+ for some 
+\begin_inset Formula $x\in\chi$
+\end_inset
+
+ but 
+\begin_inset Formula $\left(x,1\right)\neq S$
+\end_inset
+
+.
+ So given that 
+\begin_inset Formula $P\left(x\right)=\epsilon'>0$
+\end_inset
+
+ the chance that we will not see 
+\begin_inset Formula $\left(x,1\right)$
+\end_inset
+
+ in 
+\begin_inset Formula $S$
+\end_inset
+
+ is 
+\begin_inset Formula $\left(1-\epsilon'\right)^{m}$
+\end_inset
+
+.
+ So for any 
+\begin_inset Formula $\epsilon,\delta>0$
+\end_inset
+
+ if you choose 
+\begin_inset Formula $m$
+\end_inset
+
+ with 
+\begin_inset Formula $\delta>\left(1-\epsilon'\right)^{m}\Leftrightarrow\frac{\ln\left(\delta\right)}{\ln\left(1-\epsilon'\right)}<m$
+\end_inset
+
+, you will have that 
+\begin_inset Formula $P\left(L_{D}\left(A\left(S\right)\right)=0\right)\geq1-\delta$
+\end_inset
+
+ which implies 
+\begin_inset Formula $\left(L_{D}\left(A\left(S\right)\right)\leq\epsilon\right)\geq1-\delta$
+\end_inset
+
+.
+ Also, if you increase 
+\begin_inset Formula $m$
+\end_inset
+
+ to 
+\begin_inset Formula $m\leq2\frac{\ln\left(\delta\right)}{\ln\left(1-\epsilon'\right)}$
+\end_inset
+
+ you will also trivially get even lower probability of failure.
+\end_layout
+
+\begin_layout Subsubsection*
+q7
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+L_{D}\left(f_{D}\right) & =\\
+\sum_{\left(x,y\right)}p\left(x,y\right)\cdot l^{0-1}\left(f_{D},\left(x,y\right)\right) & =\\
+\sum_{\left(x,y\right):f_{D}\left(x\right)\neq y}p\left(x,y\right) & =\\
+\sum_{\left(x,y\right):f_{D}\left(x\right)\neq y}p\left(x\right)\cdot p\left(y|x\right) & \leq\\
+\sum_{\left(x,y\right):f_{D}\left(x\right)\neq y}p\left(x\right)\cdot\frac{1}{2}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+On the other hand we have
+\begin_inset Formula 
+\begin{align*}
+L_{D}\left(g\right) & =\\
+\sum_{\left(x,y\right):g\left(x\right)\neq y}p\left(x\right)\cdot p\left(y|x\right)
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Notice that if for some 
+\begin_inset Formula $x\in\chi$
+\end_inset
+
+ 
+\begin_inset Formula $g\left(x\right)=f_{D}\left(x\right)=y$
+\end_inset
+
+ then 
+\begin_inset Formula $\left(x,y\right)$
+\end_inset
+
+ is iterated over in both sums, thus we can discount such members.
+ Now if 
+\begin_inset Formula $g\left(x\right)\neq f_{D}\left(x\right)$
+\end_inset
+
+ then if 
+\begin_inset Formula $\left(x,y\right)$
+\end_inset
+
+ appear in one sum then 
+\begin_inset Formula $\left(x,\overline{y}\right)$
+\end_inset
+
+ appears in the other.
+ Assume that for some 
+\begin_inset Formula $\left(x,y\right)$
+\end_inset
+
+ we have 
+\begin_inset Formula $f_{D}\left(x\right)\neq y$
+\end_inset
+
+ then 
+\begin_inset Formula $p\left(\overline{y}|x\right)\geq\frac{1}{2}$
+\end_inset
+
+.
+ This means that
+\begin_inset Formula 
+\begin{align*}
+\sum_{\left(x,y\right):f_{D}\left(x\right)\neq y,g\left(x\right)\neq f_{D}\left(x\right)}p\left(x\right)\cdot\frac{1}{2} & \leq\\
+\sum_{\left(x,y\right):f_{D}\left(x\right)\neq y,g\left(x\right)\neq f_{D}\left(x\right)}p\left(x\right)\cdot p\left(\overline{y}|x\right) & =\\
+\sum_{\left(x,y\right):g\left(x\right)\neq y,g\left(x\right)\neq f_{D}\left(x\right)}p\left(x\right)\cdot p\left(y|x\right)
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Thus 
+\begin_inset Formula $L_{D}\left(f_{D}\right)\leq L_{D}\left(g\right)$
+\end_inset
+
+ as requested.
+\end_layout
+
+\begin_layout Subsubsection*
+q8
+\end_layout
+
+\begin_layout Standard
+Suppose you take a sample of size 
+\begin_inset Formula $C\geq\left\lfloor \log\left(\left|H\right|\right)\right\rfloor +1>\log\left(\left|H\right|\right)$
+\end_inset
+
+ then there are 
+\begin_inset Formula $2^{\left\lfloor \log\left(\left|H\right|\right)\right\rfloor +1}>\left|H\right|$
+\end_inset
+
+ possible 'explanations' to your samples i.e.
+ the total number of 0,1 vectors that label your samples is strictly larger
+ then 
+\begin_inset Formula $\left|H\right|$
+\end_inset
+
+.
+ So 
+\begin_inset Formula $H$
+\end_inset
+
+ cannot shatter any sample set of size 
+\begin_inset Formula $\geq C$
+\end_inset
+
+ because 
+\begin_inset Formula $H$
+\end_inset
+
+ contains only 
+\begin_inset Formula $\left|H\right|$
+\end_inset
+
+hypothesis.
+\end_layout
+
+\end_body
+\end_document

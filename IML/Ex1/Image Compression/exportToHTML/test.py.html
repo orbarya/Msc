@@ -1,0 +1,90 @@
+<html>
+<head>
+<title>test.py</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.ln { color: #606366; font-weight: normal; font-style: normal; }
+.s0 { color: rgb(204,120,50); }
+.s1 { color: rgb(169,183,198); }
+.s2 { color: rgb(106,135,89); }
+.s3 { color: rgb(104,151,187); }
+.s4 { color: rgb(128,128,128); }
+</style>
+</head>
+<BODY BGCOLOR="#2b2b2b">
+<TABLE CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<TR><TD><CENTER>
+<FONT FACE="Arial, Helvetica" COLOR="#000000">
+test.py</FONT>
+</center></TD></TR></TABLE>
+<pre>
+<span class="s0">from </span><span class="s1">numpy </span><span class="s0">import </span><span class="s1">diag</span><span class="s0">,</span><span class="s1">zeros</span><span class="s0">, </span><span class="s1">diag 
+</span><span class="s0">from </span><span class="s1">numpy.linalg </span><span class="s0">import </span><span class="s1">svd </span><span class="s0">as </span><span class="s1">svd</span><span class="s0">, </span><span class="s1">norm </span><span class="s0">as </span><span class="s1">norm</span><span class="s0">, </span><span class="s1">matrix_rank </span><span class="s0">as </span><span class="s1">matrix_rank 
+</span><span class="s0">from </span><span class="s1">matplotlib </span><span class="s0">import </span><span class="s1">pyplot </span><span class="s0">as </span><span class="s1">plt 
+</span><span class="s0">import </span><span class="s1">scipy.misc </span><span class="s0">as </span><span class="s1">misc 
+ 
+ 
+</span><span class="s0">def </span><span class="s1">display_image(image</span><span class="s0">, </span><span class="s1">title): 
+    plt.figure() 
+    plt.title(title) 
+    plt.imshow(image</span><span class="s0">, </span><span class="s1">cmap=plt.cm.gray) 
+    plt.imsave(fname=</span><span class="s2">&quot;./&quot; </span><span class="s1">+ title</span><span class="s0">, </span><span class="s1">arr=image) 
+    plt.show() 
+ 
+ 
+</span><span class="s0">def </span><span class="s1">svd_compression(U</span><span class="s0">, </span><span class="s1">sigma</span><span class="s0">, </span><span class="s1">V</span><span class="s0">, </span><span class="s1">r): 
+    m_k = [</span><span class="s0">None</span><span class="s1">]*</span><span class="s3">512</span><span class="s1"> 
+    ratios = [</span><span class="s0">None</span><span class="s1">]*</span><span class="s3">512</span><span class="s1"> 
+    distances = [</span><span class="s0">None</span><span class="s1">]*</span><span class="s3">512</span><span class="s1"> 
+    </span><span class="s0">for </span><span class="s1">k </span><span class="s0">in </span><span class="s1">range (</span><span class="s3">0</span><span class="s0">, </span><span class="s3">512</span><span class="s1">): 
+        m_k[k]</span><span class="s0">, </span><span class="s1">ratios[k]</span><span class="s0">, </span><span class="s1">distances[k] = svd_k_compression(U</span><span class="s0">, </span><span class="s1">sigma</span><span class="s0">, </span><span class="s1">V</span><span class="s0">, </span><span class="s1">k</span><span class="s0">, </span><span class="s1">r) 
+    </span><span class="s0">return </span><span class="s1">m_k</span><span class="s0">, </span><span class="s1">ratios</span><span class="s0">, </span><span class="s1">distances 
+ 
+ 
+</span><span class="s0">def </span><span class="s1">svd_k_compression(U</span><span class="s0">, </span><span class="s1">sigma</span><span class="s0">, </span><span class="s1">V</span><span class="s0">, </span><span class="s1">k</span><span class="s0">, </span><span class="s1">r): 
+    n = sigma.size 
+    s_k = sigma.copy() 
+    s_k[k:] = </span><span class="s3">0</span><span class="s1"> 
+</span><span class="s4">#     print(U.shape)</span><span class="s1"> 
+</span><span class="s4">#     print (s_k.shape)</span><span class="s1"> 
+</span><span class="s4">#     print((V.T).shape)</span><span class="s1"> 
+    m_k = (U.dot(diag(s_k)).dot(V)) 
+    compression_ratio = (</span><span class="s3">2</span><span class="s1">*k*n+k)/(</span><span class="s3">2</span><span class="s1">*n*r+r) 
+    frobenius = norm(input_image - m_k) 
+    </span><span class="s0">return </span><span class="s1">m_k</span><span class="s0">, </span><span class="s1">compression_ratio</span><span class="s0">, </span><span class="s1">frobenius 
+ 
+ 
+input_image = misc.ascent() 
+ 
+display_image(input_image</span><span class="s0">, </span><span class="s2">&quot;Original Image&quot;</span><span class="s1">) 
+ 
+U</span><span class="s0">, </span><span class="s1">sigma</span><span class="s0">, </span><span class="s1">V = svd(input_image) 
+rank = matrix_rank(input_image) 
+ 
+m_k</span><span class="s0">, </span><span class="s1">ratios</span><span class="s0">, </span><span class="s1">distances = svd_compression(U</span><span class="s0">, </span><span class="s1">sigma</span><span class="s0">, </span><span class="s1">V</span><span class="s0">, </span><span class="s1">rank) 
+display_image(m_k[</span><span class="s3">255</span><span class="s1">]</span><span class="s0">, </span><span class="s2">&quot;Compressed Image - k value&quot;</span><span class="s1"> 
+                        </span><span class="s2">&quot;- 255 - distance - &quot; </span><span class="s1">+ str(distances[</span><span class="s3">255</span><span class="s1">])) 
+ 
+display_image(m_k[</span><span class="s3">127</span><span class="s1">]</span><span class="s0">, </span><span class="s2">&quot;Compressed Image - k value&quot;</span><span class="s1"> 
+                        </span><span class="s2">&quot;- 127 - distance - &quot; </span><span class="s1">+ str(distances[</span><span class="s3">127</span><span class="s1">])) 
+display_image(m_k[</span><span class="s3">65</span><span class="s1">]</span><span class="s0">, </span><span class="s2">&quot;Compressed Image - k value&quot;</span><span class="s1"> 
+                       </span><span class="s2">&quot;- 65 - distance - &quot; </span><span class="s1">+ str(distances[</span><span class="s3">65</span><span class="s1">])) 
+display_image(m_k[</span><span class="s3">31</span><span class="s1">]</span><span class="s0">, </span><span class="s2">&quot;Compressed Image - k value&quot;</span><span class="s1"> 
+                       </span><span class="s2">&quot;- 31 - distance - &quot; </span><span class="s1">+ str(distances[</span><span class="s3">31</span><span class="s1">])) 
+display_image(m_k[</span><span class="s3">15</span><span class="s1">]</span><span class="s0">, </span><span class="s2">&quot;Compressed Image - k value&quot;</span><span class="s1"> 
+                       </span><span class="s2">&quot;- 15 - distance - &quot; </span><span class="s1">+ str(distances[</span><span class="s3">15</span><span class="s1">])) 
+ 
+plt.figure() 
+plt.xlabel(</span><span class="s2">&quot;k Value&quot;</span><span class="s1">) 
+plt.ylabel(</span><span class="s2">&quot;Compression Ratio&quot;</span><span class="s1">) 
+plt.plot(ratios) 
+plt.savefig(</span><span class="s2">&quot;Compression Ratio VS k Value&quot;</span><span class="s1">) 
+plt.figure() 
+plt.xlabel(</span><span class="s2">&quot;k Value&quot;</span><span class="s1">) 
+plt.ylabel(</span><span class="s2">&quot;Frobenius Distance&quot;</span><span class="s1">) 
+plt.plot(distances) 
+plt.savefig(</span><span class="s2">&quot;Frobenius Distance VS k Value&quot;</span><span class="s1">) 
+plt.show() 
+</span></pre>
+</body>
+</html>

@@ -1,0 +1,1311 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+Or Bar Yaacov
+\end_layout
+
+\begin_layout Standard
+ID - 300486396
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+3.
+\end_layout
+
+\end_inset
+
+Let 
+\begin_inset Formula $\mathcal{H}$
+\end_inset
+
+ be a non PAC learnable hypothesis class.
+ Suppose A(S) is an algorithm that always returns the hypothesis 
+\begin_inset Formula $\forall x\in\mathcal{X},h(x)=0.$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\mathbb{E}_{S\vert x\sim\mathcal{D}^{m}}\left[L_{\mathcal{D}}(A(S)\right]$
+\end_inset
+
+=
+\begin_inset Formula $\mathbb{E}_{S|x\sim\mathcal{D}^{m}}\left[L_{\mathcal{D}}\left(h\right)\right]=L_{\mathcal{D}}\left(h\right)=\mathbb{E}_{S|x\sim\mathcal{D}^{m}}\left[L_{\mathcal{S}}\left(h\right)\right]=\mathbb{E}_{S|x\sim\mathcal{D}^{m}}\left[L_{\mathcal{S}}\left(A\left(S\right)\right)\right]\leq\mathbb{E}_{S|x\sim\mathcal{D}^{m}}\left[L_{\mathcal{S}}\left(A(S)\right)\right]+\epsilon_{m}$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Therefore the conditions hold for a non PAC learnable hypothesis class.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+4.
+\end_layout
+
+\end_inset
+
+Let 
+\begin_inset Formula $\mathcal{H}$
+\end_inset
+
+ be an hypothesis class of binary classifiers.
+ 
+\begin_inset Newline newline
+\end_inset
+
+Suppose that 
+\begin_inset Formula $\mathcal{H}$
+\end_inset
+
+is agnostic PAC learnable and let A be a learning algorithm that learns
+ 
+\begin_inset Formula $\mathcal{H}$
+\end_inset
+
+with sample complexity 
+\begin_inset Formula $m_{\mathcal{H}}(.,.)$
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+Let 
+\begin_inset Formula $\mathcal{D}$
+\end_inset
+
+ be an unknown distribution over 
+\begin_inset Formula $\mathcal{X\times}\left\{ 0,1\right\} $
+\end_inset
+
+ and let 
+\begin_inset Formula $f$
+\end_inset
+
+ be the true function.
+\begin_inset Newline newline
+\end_inset
+
+Since 
+\begin_inset Formula $\mathcal{H}$
+\end_inset
+
+is agnostic PAC learnable and A is learning algorithm that learns 
+\begin_inset Formula $\mathcal{H}$
+\end_inset
+
+with sample complexity we know that for all 
+\begin_inset Formula $\epsilon,\delta\in\left(0,1\right)$
+\end_inset
+
+ 
+\begin_inset Formula 
+\[
+Pr\left(L_{D}(h)\leq\underset{h\in\mathcal{H}}{min}L_{D}\left(h\right)+\epsilon\right)\geq1-\delta
+\]
+
+\end_inset
+
+where 
+\begin_inset Formula 
+\[
+L_{D}\left(h\right)=\mathcal{D}\left(\left\{ \left(x,y\right):h(x)\neq y\right\} \right)
+\]
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Let us take the realizability assumption, that is, 
+\begin_inset Formula 
+\[
+\exists f\in\mathcal{H}s.t.\forall i\left(x_{1},...,x_{m}\right),y_{i}=f(x_{i})
+\]
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+This means that 
+\begin_inset Formula $\underset{h\in\mathcal{H}}{min}L_{D}\left(h\right)=0$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+We may further assume w.l.o.g that 
+\begin_inset Formula $Pr\left(y|x\right)$
+\end_inset
+
+ is determined deterministically by 
+\begin_inset Formula $f(x)$
+\end_inset
+
+ since the realizability assumption tells us that 
+\begin_inset Formula $y_{i}=f(x_{i})$
+\end_inset
+
+ and therefore 
+\begin_inset Formula $Pr(y_{i}=f(x_{i})|x_{i})=1$
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+This means that 
+\begin_inset Formula $L_{D}\left(h\right)=\underset{\left(x,y\right)\sim\mathcal{D}}{Pr}\left(h(x)\neq y\right)=L_{D,f}\left(h\right)=\underset{x\sim\mathcal{D}}{Pr}\left(h(x)\neq f(x)\right)$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+And so, it holds that :
+\begin_inset Formula 
+\[
+Pr\left(L_{D,f}(h)\leq\epsilon\right)\geq1-\delta
+\]
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+And therefore 
+\begin_inset Formula $\mathcal{H}$
+\end_inset
+
+ is PAC learnable and A is a successful PAC learner for 
+\begin_inset Formula $\mathcal{H}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+5.
+\end_layout
+
+\end_inset
+
+Let 
+\begin_inset Formula $\mathcal{X}$
+\end_inset
+
+ be a discrete domain, and let 
+\begin_inset Formula $\mathcal{H}_{Singleton}=\left\{ h_{z}:z\in\mathcal{X}\right\} \cup\left\{ h^{-}\right\} $
+\end_inset
+
+ where 
+\begin_inset Formula 
+\[
+h_{z}\left(x\right)=\left\{ \begin{matrix}1 & x=z\\
+0 & x\neq z
+\end{matrix}\right.,h^{-}\left(x\right)=0\,\forall x\in\mathcal{X}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Let's recall the empirical risk definition:
+\begin_inset Formula 
+\[
+L_{S}\left(h\right)=\frac{1}{m}\left|\left\{ i:h(x_{i})\neq y_{i}\right\} \right|
+\]
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+An ERM based algorithm will have an input of a training set 
+\begin_inset Formula $S=\left(x_{1},y_{1}\right),...,\left(x_{m},y_{m}\right)$
+\end_inset
+
+ and output any 
+\begin_inset Formula $h\in\mathcal{H}_{Singleton}$
+\end_inset
+
+ which minimizes the empirical risk.
+\begin_inset Newline newline
+\end_inset
+
+I suggest the following: 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+If all labels 
+\begin_inset Formula $y_{1},...y_{m}=0$
+\end_inset
+
+ return 
+\begin_inset Formula $h^{-}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Else find the first label 
+\begin_inset Formula $y_{i}=1$
+\end_inset
+
+ and return 
+\begin_inset Formula $h_{x_{i}}$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+The realizability assumption assures us the training set will only contain
+ at most one unique sample that is labeled as 1 and therfore a sample labled
+ 1 uniquely defines the true function.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+We must show that there exists a function 
+\begin_inset Formula $m_{\mathcal{H}}:\left(0,1\right)^{2}\rightarrow\mathbb{N}$
+\end_inset
+
+ such that for all 
+\begin_inset Formula $\epsilon,\delta\in(0,1)$
+\end_inset
+
+, for all distributions 
+\begin_inset Formula $\mathcal{D}$
+\end_inset
+
+ over 
+\begin_inset Formula $\mathcal{X}$
+\end_inset
+
+and for all labeling function 
+\begin_inset Formula $f:\mathcal{X}\rightarrow\left\{ 0,1\right\} $
+\end_inset
+
+ running the learning algorithm on 
+\begin_inset Formula $m\geq m_{\mathcal{H}}$
+\end_inset
+
+ i.i.d samples generated by 
+\begin_inset Formula $\mathcal{D}$
+\end_inset
+
+ the algorithm returns h such that 
+\begin_inset Formula $Pr\left(L_{\mathcal{D},f}(h)\leq\epsilon\right)\geq1-\delta$
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+Let's fix 
+\begin_inset Formula $\mathcal{D}$
+\end_inset
+
+, and divide into cases:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+The labeling function 
+\begin_inset Formula $f(x)=h^{-}(x)$
+\end_inset
+
+, therefore the training set will not contain a label of 1 and so for any
+ size of a training set my algorithm will return 
+\begin_inset Formula $h^{-}$
+\end_inset
+
+ and it's generalization error will be 
+\begin_inset Formula $L_{D,f}\left(h\right)=\text{\ensuremath{\underset{x\sim\mathcal{D}}{Pr}}\left[h(x)≠f(x)\right]=0}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Enumerate
+The labeling function 
+\begin_inset Formula $f(x)=h_{z}(x)$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+The training set contains a label of 1 and so my algorithm will return 
+\begin_inset Formula $h_{z}$
+\end_inset
+
+ and it's generalization error will be 
+\begin_inset Formula $L_{D,f}\left(h\right)=\text{\ensuremath{\underset{x\sim\mathcal{D}}{Pr}}\left[h(x)≠f(x)\right]=0}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Enumerate
+The training set doesn't contain a label of 1 and so my algorithm will return
+ 
+\begin_inset Formula $h^{-}$
+\end_inset
+
+.
+ 
+\begin_inset Newline newline
+\end_inset
+
+Let 
+\begin_inset Formula $\epsilon,\delta\in\left(0,1\right)$
+\end_inset
+
+, Let's denote 
+\begin_inset Formula $Pr\left(x=z\right)=\epsilon'$
+\end_inset
+
+.
+ 
+\begin_inset Newline newline
+\end_inset
+
+The generalization error in such a case will be 
+\begin_inset Formula 
+\[
+L_{D,f}\left(h\right)=\text{\ensuremath{\underset{x\sim\mathcal{D}}{Pr}}\left[h(x)≠f(x)\right]=\ensuremath{Pr\left[x=z\right]}}=\epsilon'
+\]
+
+\end_inset
+
+And so, in this case, the generalization error is not under our control,
+ however, we can avoid this case.
+\begin_inset Newline newline
+\end_inset
+
+The probability that our training set doesn't contain 
+\begin_inset Formula $\left(z,1\right)$
+\end_inset
+
+ is 
+\begin_inset Formula $Pr[\left(z,1\right)\notin S]=\left(1-\epsilon'\right)^{m}$
+\end_inset
+
+ .
+ So we can increase our confidence that we will not encounter this case
+ by increasing m.
+ Any m that satisfies the inequality 
+\begin_inset Formula 
+\[
+\left(1-\epsilon'\right)^{m}\leq\delta
+\]
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Will give us 
+\begin_inset Formula 
+\[
+Pr\left(L_{\mathcal{D},f}(h)=0\leq\epsilon\right)\geq1-\delta
+\]
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+And so, a function 
+\begin_inset Formula $m_{\mathcal{H}}:\left(0,1\right)^{2}\rightarrow\mathbb{N}$
+\end_inset
+
+ exists and this proves that 
+\begin_inset Formula $\mathcal{H}$
+\end_inset
+
+ is PAC learnable.
+ To give an upper bound on 
+\begin_inset Formula $m_{\mathcal{H}}$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+\left(1-\epsilon'\right)^{m}\leq\delta\Rightarrow log\left(\left(1-\epsilon'\right)^{m}\right)\leq log(\delta)\Rightarrow m\cdot log\left(1-\epsilon'\right)\leq log\left(\delta\right)
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+m\leq\frac{log\left(\delta\right)}{log\left(1-\epsilon'\right)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+7.
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $L_{\mathcal{D}}\left(h\right)=\underset{\left(x,y\right)\sim\mathcal{D}}{Pr}\left[h(x)\neq y\right]=\begin{cases}
+\underset{\left(x,y\right)\sim\mathcal{D}}{Pr}\left[y\neq0|x\right] & \text{if h(x)=0,}\\
+\underset{\left(x,y\right)\sim\mathcal{D}}{Pr}\left[y\neq1|x\right] & \text{if h(x)=1}
+\end{cases}$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+We wish to minimize the function 
+\begin_inset Formula $\phi(x)$
+\end_inset
+
+ defined below: 
+\begin_inset Formula 
+\[
+\phi(x)=\begin{cases}
+Pr\left[y\neq0|x\right] & \text{if h(x)=0,}\\
+Pr\left[y\neq1|x\right] & \text{if h(x)=1}
+\end{cases}=\begin{cases}
+Pr\left[y=1|x\right] & \text{if h(x)=0,}\\
+1-Pr\left[y=1|x\right] & \text{if h(x)=1}
+\end{cases}
+\]
+
+\end_inset
+
+So if 
+\begin_inset Formula $Pr\left[y=1|x\right]<1-Pr\left[y=1|x\right]$
+\end_inset
+
+ we should choose h(x)=0 otherwise we should choose h(x)=1.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $Pr\left[y=1|x\right]<1-Pr\left[y=1|x\right]\Leftrightarrow Pr\left[y=1|x\right]<\frac{1}{2}$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Therefore, the optimal classifier is given by:
+\begin_inset Formula 
+\[
+f_{\mathcal{D}}(x)=\begin{cases}
+1 & Pr\left[y=1|x\right]\geq\frac{1}{2}\\
+0 & otherwise
+\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+8.
+\end_layout
+
+\end_inset
+
+Let 
+\begin_inset Formula $\mathcal{H}=\left\{ h_{1},...,h_{N}\right\} $
+\end_inset
+
+ be a finite hypothesis class over domain 
+\begin_inset Formula $\mathcal{X}$
+\end_inset
+
+, denote 
+\begin_inset Formula $VC\left(\mathcal{H}\right)=d$
+\end_inset
+
+.
+ There exists 
+\begin_inset Formula $C\subset\mathcal{X},\left|C\right|=d$
+\end_inset
+
+ such that 
+\begin_inset Formula $\mathcal{H}$
+\end_inset
+
+ shatters C meaning that 
+\begin_inset Formula $\left|\mathcal{H_{C}}\right|=2^{\left|C\right|}\Rightarrow\left|\mathcal{H_{C}}\right|=2^{d}$
+\end_inset
+
+ therefore 
+\begin_inset Formula 
+\[
+2^{d}\leq\mathcal{\left|H\right|}\Rightarrow d\leq log\left(\left|H\right|\right)\Rightarrow\left\lfloor d\right\rfloor \leq\left\lfloor log\left(\left|H\right|\right)\right\rfloor \Rightarrow d\leq\left\lfloor log\left(\left|H\right|\right)\right\rfloor 
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+9.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Given a subset 
+\begin_inset Formula $C\subseteq\mathcal{X}$
+\end_inset
+
+ the domain set, in order to show that 
+\begin_inset Formula $\mathcal{H}$
+\end_inset
+
+ shatters C I must show that for every possible labeling of the set C there
+ exists an hypothesis 
+\begin_inset Formula $h\in\mathcal{H}$
+\end_inset
+
+ that explains it.
+ 
+\begin_inset Newline newline
+\end_inset
+
+For 
+\begin_inset Formula $\left|C\right|=1,C=\left\{ x\in\mathcal{X}\right\} $
+\end_inset
+
+ 
+\begin_inset Formula $\mathcal{H}$
+\end_inset
+
+ shatters C beacuse 
+\begin_inset Formula $\mathcal{H_{C}=}\left\{ h_{x}(x)=1,h^{-}(x)=0\right\} \Rightarrow\left|\mathcal{H_{C}}\right|=2$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+For every 
+\begin_inset Formula $C\subseteq\mathcal{X}$
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+such that 
+\begin_inset Formula $\left|C\right|=2,C=\left\{ x_{1},x_{2}\in\mathcal{X}\right\} $
+\end_inset
+
+ there is no hypothesis in 
+\begin_inset Formula $\mathcal{H}_{Singleton}$
+\end_inset
+
+ that can explain the labeling 
+\begin_inset Formula $(x_{1},1),(x_{2},1)$
+\end_inset
+
+ and therefore 
+\begin_inset Formula $\mathcal{\left|H_{C}\right|=}3<2^{\left|C\right|}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Let's complete the proof by showing that 
+\begin_inset Formula $d\leq VC\left(\mathcal{H}\right)$
+\end_inset
+
+, in other words, we wish to give a set 
+\begin_inset Formula $C\subseteq\mathcal{X},\left|C\right|=d$
+\end_inset
+
+ such that 
+\begin_inset Formula $\mathcal{H}$
+\end_inset
+
+ shatters C.
+\begin_inset Newline newline
+\end_inset
+
+Let's consider the set 
+\begin_inset Formula $C=\left\{ e_{1},...,e_{d}\right\} $
+\end_inset
+
+ where 
+\begin_inset Formula $e_{i}=\left[\begin{matrix}e_{i1}=0\\
+\vdots\\
+e_{ii}=1\\
+\vdots\\
+e_{id}=0
+\end{matrix}\right]$
+\end_inset
+
+ is the unit vector.
+ Let 
+\begin_inset Formula $l_{1},...,l_{d}\in\left\{ 0,1\right\} $
+\end_inset
+
+ be some labeling of 
+\begin_inset Formula $e_{1},...,e_{d}$
+\end_inset
+
+ respectively.
+\begin_inset Newline newline
+\end_inset
+
+The hypothesis 
+\begin_inset Formula $r_{1}\mathcircumflex r_{2}\mathcircumflex...\mathcircumflex r_{d}\in\text{\ensuremath{\mathcal{H}}}$
+\end_inset
+
+ where 
+\begin_inset Formula $r_{i}=\begin{cases}
+e_{i} & l_{i}=1\\
+\bar{e}_{i} & l_{i}=0
+\end{cases}$
+\end_inset
+
+ explains this labeling for each member 
+\begin_inset Formula $e_{j}\in C$
+\end_inset
+
+ and therefore 
+\begin_inset Formula $\mathcal{H}$
+\end_inset
+
+ shatters C.
+\begin_inset Newline newline
+\end_inset
+
+In recitation we have seen that 
+\begin_inset Formula $d\geq VC\left(\mathcal{H}\right)$
+\end_inset
+
+ and we can conclude that 
+\begin_inset Formula $VC\left(\mathcal{H}\right)=d$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+10.
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+The hypothesis class defind in question 11 has a VCdim that is equal to
+ the upper bound as I have proved in question 11.
+\begin_inset Formula 
+\[
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Consider the domain 
+\begin_inset Formula $\mathcal{X}=\left\{ 1,...,k\right\} $
+\end_inset
+
+ and consider the hypothesis class of threshold functions
+\begin_inset Formula 
+\[
+\mathcal{H}_{th}=\left\{ h_{\theta}(x)=sign\left(x-\theta\right):\theta\in\mathbb{R}\right\} 
+\]
+
+\end_inset
+
+
+\begin_inset Formula $\left|H\right|=k$
+\end_inset
+
+ but VC
+\begin_inset Formula $\left(\mathcal{H}\right)=1$
+\end_inset
+
+ and since k can be arbitrarily large, the gap between 
+\begin_inset Formula $log_{2}\left(\left|\mathcal{H}\right|\right)$
+\end_inset
+
+ and VC
+\begin_inset Formula $\left(\mathcal{H}\right)$
+\end_inset
+
+ can be arbitrarily large.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+11.
+\end_layout
+
+\end_inset
+
+First let's note that 
+\begin_inset Formula $\left|H_{parity}\right|=2^{n}$
+\end_inset
+
+ and therefore, by q8 we know that 
+\begin_inset Formula 
+\[
+VC\left(H_{parity}\right)\leq\left\lfloor log\left(\left|H_{parity}\right|\right)\right\rfloor =n
+\]
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Let's show that 
+\begin_inset Formula $VC\left(H_{parity}\right)\geq n$
+\end_inset
+
+ and conclude that 
+\begin_inset Formula $VC\left(H_{parity}\right)=n$
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+Consider the set 
+\begin_inset Formula $C\subseteq\left\{ 0,1\right\} ^{n}$
+\end_inset
+
+,
+\begin_inset Formula $\left|C\right|=n,C=\left\{ e_{1},...,e_{n}\right\} $
+\end_inset
+
+ where 
+\begin_inset Formula $e_{i}=\left[\begin{matrix}e_{i1}=0\\
+\vdots\\
+e_{ii}=1\\
+\vdots\\
+e_{id}=0
+\end{matrix}\right]$
+\end_inset
+
+ is the unit vector.
+ Let 
+\begin_inset Formula $l_{1},...,l_{d}\in\left\{ 0,1\right\} $
+\end_inset
+
+ be some labeling of 
+\begin_inset Formula $e_{1},...,e_{d}$
+\end_inset
+
+ respectively.
+\begin_inset Newline newline
+\end_inset
+
+Consider the hypothesis 
+\begin_inset Formula $h_{I}$
+\end_inset
+
+ where 
+\begin_inset Formula $I=\left\{ j:j\in\left[n\right],l_{j}=1\right\} $
+\end_inset
+
+ In words, the hypothesis will sum over all j's where the labeling of 
+\begin_inset Formula $e_{j}$
+\end_inset
+
+ is 1.
+\begin_inset Newline newline
+\end_inset
+
+Now 
+\begin_inset Formula $h_{I}(e_{i})=\left(\underset{j\in I}{\sum}e_{ij}\right)mod2=\begin{cases}
+1mod2=1 & l_{i}=1\\
+0mod2=0 & l_{i}=0
+\end{cases}$
+\end_inset
+
+.
+ So the hypothesis 
+\begin_inset Formula $h_{I}$
+\end_inset
+
+ labels correctly all elements in 
+\begin_inset Formula $C$
+\end_inset
+
+ and so 
+\begin_inset Formula $\mathcal{H}_{parity}$
+\end_inset
+
+ shatters C.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+12.
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\mathcal{X=\mathbb{R}}$
+\end_inset
+
+.Let's prove that 
+\begin_inset Formula $VC\left(\mathcal{H}_{k-intervals}\right)=2k$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+First let's show that 
+\begin_inset Formula $C\subseteq\mathcal{X},\left|C\right|=2k,C=\left\{ 1,...,2k\right\} $
+\end_inset
+
+ is shattered by 
+\begin_inset Formula $\mathcal{H}_{k-intervals}$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $l_{1},...,l_{2^{k}}\in\left\{ 0,1\right\} $
+\end_inset
+
+ be some labeling of 
+\begin_inset Formula $1,...,2k$
+\end_inset
+
+ respectively.
+\begin_inset Newline newline
+\end_inset
+
+Let 
+\begin_inset Formula $\epsilon<<1$
+\end_inset
+
+, Define the hypothesis 
+\begin_inset Formula $h_{A}\left(x\right),$
+\end_inset
+
+where 
+\begin_inset Formula $A=\cup_{i=1}^{k}\left[a_{i},b_{i}\right]$
+\end_inset
+
+ and 
+\begin_inset Formula $a_{i}=\begin{cases}
+2i-1-\epsilon & l_{2i-1}=1\\
+2i-1+\epsilon & l_{2i-1}=0
+\end{cases}$
+\end_inset
+
+ and 
+\begin_inset Formula $b_{i}=\begin{cases}
+2i-1+\epsilon & l_{2i-1}=1,l_{2i}=0\\
+2i+\epsilon & l_{2i-1}=1,l_{2i}=1\\
+2i+\epsilon & l_{2i-1}=0,l_{2i}=1\\
+2i-\epsilon & l_{2i-1}=0,l_{2i}=0
+\end{cases}$
+\end_inset
+
+ clearly 
+\begin_inset Formula $\forall j\in\left[2k\right],\,h_{A}\left(j\right)=\begin{cases}
+1 & l_{j}=1\\
+0 & l_{j}=0
+\end{cases}$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+In words, we treat each pair of adjacent points in C seperately and explain
+ each pair with it's own interval.
+ 
+\begin_inset Newline newline
+\end_inset
+
+Now let's prove that for all 
+\begin_inset Formula $C\subseteq\mathcal{X},\left|C\right|=2k+1,C=\left\{ c_{1},...,c_{2k+1}\right\} $
+\end_inset
+
+, C is not shattered by 
+\begin_inset Formula $\mathcal{H}_{k-intervals}$
+\end_inset
+
+.
+ 
+\begin_inset Newline newline
+\end_inset
+
+Let's consider the following labeling for 
+\begin_inset Formula $C$
+\end_inset
+
+: 
+\begin_inset Formula $l_{1}=1,l_{2}=0,l_{3}=1,...,l_{2k}=0,l_{2k+1}=1\in\left\{ 0,1\right\} $
+\end_inset
+
+, i.e we take the alternating labeling of the elements of C starting with
+ a positive labeling.
+ Since 2k+1 is an odd number we know that we have k+1 elements labeled as
+ 1 and they are all seperated by elements labeled as 0 therefore there is
+ no hypothesis in 
+\begin_inset Formula $\mathcal{H}_{k-intervals}$
+\end_inset
+
+ that can explain this labeling, and therefore C is not shattered by 
+\begin_inset Formula $\mathcal{H}_{k-intervals}$
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+If k in unlimited then for any 
+\begin_inset Formula $C\subseteq\mathcal{X},\left|C\right|=p$
+\end_inset
+
+ and for any labeling of C we can take k=p.
+ The hypothesis where there's an interval for each 
+\begin_inset Formula $c\in C$
+\end_inset
+
+ that is labeled as 1 and that interval contains only c and no other c'
+ in C clearly explains this labeling of C.
+ Therefore in this case 
+\begin_inset Formula $VC(\mathcal{H}_{intervals})=\infty$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Argument item:1
+status open
+
+\begin_layout Plain Layout
+13.
+\end_layout
+
+\end_inset
+
+Consider the class of homogenous halfspaces in 
+\begin_inset Formula $\mathbb{R}^{d}$
+\end_inset
+
+:
+\begin_inset Formula $\mathcal{H}=\left\{ h_{w}:h_{w}(x)=sgn\left(\left\langle w,x\right\rangle \right),w\in\mathbb{R}^{d}\right\} $
+\end_inset
+
+, as we have seen in recitation 5, VCdim
+\begin_inset Formula $\left(\mathcal{H}\right)=d$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $\mathcal{H}S_{d}=\left\{ h_{w,b}:h_{w,b}(x)=sgn\left(\left\langle w,x\right\rangle +b\right),w\in\mathbb{R}^{d},b\in\mathbb{R}\right\} $
+\end_inset
+
+, let's prove that 
+\begin_inset Formula $VCdim\left(\mathcal{H}S_{d}\right)=d+1$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Let's first show that there exists 
+\begin_inset Formula $C\subseteq\mathcal{X},\left|C\right|=d+1,$
+\end_inset
+
+which 
+\begin_inset Formula $\mathcal{H}S_{d}$
+\end_inset
+
+ shatters.
+ Let's consider 
+\begin_inset Formula $C=\left\{ e_{1},...e_{d},0\right\} $
+\end_inset
+
+ where 
+\begin_inset Formula $e_{i}$
+\end_inset
+
+ is the i'th unit vector.
+ Given some labeling of C 
+\begin_inset Formula $l_{1},...,l_{d+1}\in\left\{ -1,1\right\} $
+\end_inset
+
+ take the hypothesis 
+\begin_inset Formula $w=\left[\begin{matrix}l_{1}\\
+\vdots\\
+l_{d}
+\end{matrix}\right],b=\frac{1}{2}l_{d+1}$
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\forall i\in\left[d\right],\,h_{w,b}(e_{i})=sgn\left(\left\langle w,x\right\rangle +b\right)=sgn\left(l_{i}+\frac{1}{2}l_{d+1}\right)=sgn\left(l_{i}\right)
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+h_{w,b}(0)=sgn\left(\left\langle w,0\right\rangle +b\right)=sgn\left(b\right)=sgn\left(\frac{1}{2}l_{d+1}\right)=sgn\left(l_{d+1}\right)
+\]
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Now it's left to prove that for all 
+\begin_inset Formula $C\subseteq\mathcal{X},\left|C\right|=d+2$
+\end_inset
+
+ 
+\begin_inset Formula $\mathcal{H}S_{d}$
+\end_inset
+
+ doesn't shatter C, let's assume by contradiction that there exists 
+\begin_inset Formula $C\subseteq\mathcal{X},\left|C\right|=d+2,\,C=\left\{ c_{1},...,c_{d+2}\right\} .$
+\end_inset
+
+ that 
+\begin_inset Formula $\mathcal{H}S_{d}$
+\end_inset
+
+ shatters, i.e for every possible label of C 
+\begin_inset Formula $l_{1},...,l_{d+2}\in\left\{ -1,1\right\} $
+\end_inset
+
+ there exists a 
+\begin_inset Formula $w=\left(w_{1},...,w_{d}\right)\in\text{\ensuremath{\mathbb{R}^{d},b\in\mathbb{R}}}$
+\end_inset
+
+such that 
+\begin_inset Formula $h_{w,b}$
+\end_inset
+
+ predicts correctly the labeling.
+\begin_inset Formula 
+\[
+h_{w,b}(c_{i})=\left\langle c_{i},w\right\rangle +b=l_{i}
+\]
+
+\end_inset
+
+ 
+\begin_inset Newline newline
+\end_inset
+
+The set 
+\begin_inset Formula $C'=\left\{ (1,c_{1}),...,(1,c_{d+2})\right\} $
+\end_inset
+
+ is shattered by the class of homogenous halfspaces in 
+\begin_inset Formula $\mathbb{R}^{d+1}$
+\end_inset
+
+ because given a labeling 
+\begin_inset Formula $l_{1},...,l_{d+2}$
+\end_inset
+
+ the hypothesis 
+\begin_inset Formula $h_{w}(x)=\left\langle (b,w),x\right\rangle $
+\end_inset
+
+ predicts correctly on all elements of C'
+\begin_inset Formula 
+\[
+h_{w}((1,c_{i}))=\left\langle (b,w),(1,c_{i})\right\rangle =b+\left\langle w,c_{i}\right\rangle =l_{i}
+\]
+
+\end_inset
+
+In contradiction to the VCdim of the class of homogenous halfspaces in 
+\begin_inset Formula $\mathbb{R}^{d+1}$
+\end_inset
+
+ being d+1.
+\end_layout
+
+\end_body
+\end_document

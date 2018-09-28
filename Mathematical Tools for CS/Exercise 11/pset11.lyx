@@ -1,0 +1,1559 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\begin_preamble
+\usepackage{pgfplots}
+\usepackage{tikz}
+\usetikzlibrary{patterns}
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Enumerate
+Let 
+\begin_inset Formula $C_{d}\subseteq\mathbb{R}^{d}$
+\end_inset
+
+ be the unit ball in 
+\begin_inset Formula $l_{1}$
+\end_inset
+
+ norm
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Let's consider the polytope P derived from the following set of inequalities:
+ 
+\begin_inset Formula $a_{i}x\leq1$
+\end_inset
+
+ where 
+\begin_inset Formula $a_{i}\in\{-1,1\}^{d},1\leq i\leq2^{d}$
+\end_inset
+
+ the set of 
+\begin_inset Formula $a_{i}$
+\end_inset
+
+ contain all possibilities of each coordinate being either 1 or -1.
+ I claim that 
+\begin_inset Formula $P=C_{d}$
+\end_inset
+
+ 
+\begin_inset Newline newline
+\end_inset
+
+First, let's suppose that 
+\begin_inset Formula $x\in C_{d}$
+\end_inset
+
+, then 
+\begin_inset Formula $\sum_{i=1}^{n}\left|x_{i}\right|\leq1$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Suppose, by contradiction, that there exist two subsets 
+\begin_inset Formula $M,N\subset[d]$
+\end_inset
+
+ such that 
+\series bold
+
+\begin_inset Formula $M\cup N=[d]$
+\end_inset
+
+ 
+\series default
+and such that:
+\begin_inset Formula 
+\[
+1<\sum_{i\in M}-x_{i}+\sum_{i\in N}x_{i}
+\]
+
+\end_inset
+
+ Since 
+\begin_inset Formula $\underset{i\in M}{\sum}-x_{i}+\underset{i\in N}{\sum}x_{i}\leq\underset{i\in[d]}{\sum}\left|x_{i}\right|$
+\end_inset
+
+ we get 
+\begin_inset Formula $1<\underset{i\in[d]}{\sum}\left|x_{i}\right|$
+\end_inset
+
+ in contradiction to 
+\begin_inset Formula $x\in C_{d}$
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+So we know that for every two subsets 
+\begin_inset Formula $M,N\subset[d]$
+\end_inset
+
+ such that 
+\series bold
+
+\begin_inset Formula $M\cup N=[d]$
+\end_inset
+
+ 
+\series default
+:
+\series bold
+ 
+\begin_inset Formula $\sum_{i\in M}-x_{i}+\sum_{i\in N}x_{i}\leq1$
+\end_inset
+
+
+\series default
+.
+ Therefore, for all 
+\begin_inset Formula $1\leq i\leq2^{d}\,\,a_{i}x\leq1$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Now suppose that 
+\begin_inset Formula $x\in P$
+\end_inset
+
+, therefore 
+\begin_inset Formula $1\leq i\leq2^{d}\,\,a_{i}x\leq1$
+\end_inset
+
+, and suppose, by contradiction, that 
+\begin_inset Formula $\sum_{i=1}^{n}\left|x_{i}\right|>1$
+\end_inset
+
+, then there exist two
+\begin_inset Newline newline
+\end_inset
+
+subsets 
+\begin_inset Formula $M,N\subset[d]$
+\end_inset
+
+ such that 
+\series bold
+
+\begin_inset Formula $M\cup N=[d]$
+\end_inset
+
+ 
+\series default
+and such that:
+\begin_inset Formula 
+\[
+1<\sum_{i\in M}-x_{i}+\sum_{i\in N}x_{i}
+\]
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+But that means that there exist a vector 
+\begin_inset Formula $a\in\{-1,1\}^{d}$
+\end_inset
+
+ such that 
+\begin_inset Formula $a_{i}x>1$
+\end_inset
+
+ in contradiction to the assumption.
+\end_layout
+
+\begin_layout Enumerate
+Let's first show 
+\begin_inset Formula $C_{d}\subseteq conv\left(\left\{ e_{1},...,e_{d},-e_{1},...,-e_{d}\right\} \right)$
+\end_inset
+
+: 
+\begin_inset Newline newline
+\end_inset
+
+Let 
+\begin_inset Formula $x\in C_{d},\,\,\Rightarrow x=\sum_{i=1}^{d}x_{i}e_{i},\,\,\sum_{i=1}^{d}\left|x_{i}\right|\leq1$
+\end_inset
+
+.
+ We wish to find a convex combination of 
+\begin_inset Formula $e_{1},...,e_{d},-e_{1},...,-e_{d}$
+\end_inset
+
+ that will give us x.
+\begin_inset Newline newline
+\end_inset
+
+Let's denote 
+\begin_inset Formula $\sum_{i=1}^{d}\left|x_{i}\right|=p$
+\end_inset
+
+ and so:
+\begin_inset Formula 
+\[
+x=\sum_{i=1}^{d}x_{i}e_{i}=\underset{i\in[n]\,\,x_{i}\geq0}{\sum}\left|x_{i}\right|e_{i}+\underset{i\in[n]\,\,x_{i}<0}{\sum}\left|x_{i}\right|\left(-e_{i}\right)=
+\]
+
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\underset{i\in[n]\,\,x_{i}\geq0}{\sum}\left|x_{i}\right|e_{i}+\underset{i\in[n]\,\,x_{i}<0}{\sum}\left|x_{i}\right|\left(-e_{i}\right)+\frac{(1-p)}{2}e_{k}+\frac{(1-p)}{2}\left(-e_{k}\right),\,\,k\in[n]
+\]
+
+\end_inset
+
+This is a convex combination of 
+\begin_inset Formula $e_{1},...,e_{d},-e_{1},...,-e_{d}$
+\end_inset
+
+ since:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+All coefficients in 
+\begin_inset Formula $[0,1]$
+\end_inset
+
+:
+\begin_inset Formula $\sum_{i=1}^{d}\left|x_{i}\right|\leq1\Rightarrow1\leq i\leq d,\left|x_{i}\right|\leq1\Rightarrow\left|x_{i}\right|\in[0,1],p\in[0,1]\Rightarrow\frac{(1-p)}{2}\in[0,1]$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\noindent
+\align left
+Sum of coefficients is 1:
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula 
+\[
+\sum_{i=1}^{d}\left|x_{i}\right|+\frac{(1-p)}{2}+\frac{(1-p)}{2}=p+2\frac{(1-p)}{2}=p+1-p=1
+\]
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Now we will show that 
+\begin_inset Formula $conv\left(\left\{ e_{1},...,e_{d},-e_{1},...,-e_{d}\right\} \right)\subseteq C_{d}$
+\end_inset
+
+:
+\begin_inset Newline newline
+\end_inset
+
+Let 
+\begin_inset Formula $conv\left(\left\{ e_{1},...,e_{d},-e_{1},...,-e_{d}\right\} \right)\ni v=\sum_{i=1}^{n}\alpha_{i}e_{i}+\sum_{i=1}^{n}\beta_{i}\left(-e_{i}\right)$
+\end_inset
+
+ such that 
+\begin_inset Formula $0\leq\alpha_{i},\beta_{i}\leq1,\,\,\sum_{i=1}^{n}\alpha_{i}+\beta_{i}=1$
+\end_inset
+
+ 
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula 
+\[
+v=\sum_{i=1}^{n}\alpha_{i}e_{i}+\sum_{i=1}^{n}\beta_{i}\left(-e_{i}\right)=\sum_{i=1}^{n}\left(\alpha_{i}-\beta_{i}\right)e_{i}
+\]
+
+\end_inset
+
+Notice that 
+\begin_inset Formula $\left\Vert v\right\Vert _{1}=\sum_{i=1}^{n}\left|\alpha_{i}-\beta_{i}\right|\leq\sum_{i=1}^{n}\left|\alpha_{i}\right|+\left|\beta_{i}\right|=\sum_{i=1}^{n}\alpha_{i}+\beta_{i}=1$
+\end_inset
+
+ and so 
+\begin_inset Formula $v\in C_{d}$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Claim: the set of vertices of 
+\begin_inset Formula $C_{d}$
+\end_inset
+
+ is 
+\begin_inset Formula $e_{1},...,e_{d},-e_{1},...,-e_{d}$
+\end_inset
+
+.
+ 
+\begin_inset Newline newline
+\end_inset
+
+Proof: Let's consider the vector 
+\begin_inset Formula $e_{i}$
+\end_inset
+
+.
+ The following set 
+\begin_inset Formula $L\left(e_{i},-1\right)=\{x\in\mathbb{R}^{d}:\left\langle e_{i},x\right\rangle =-1\}$
+\end_inset
+
+ is a supporting hyper-plane of 
+\begin_inset Formula $C_{d}$
+\end_inset
+
+ since:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Let 
+\begin_inset Formula $x\in C_{d}$
+\end_inset
+
+ then 
+\begin_inset Formula $\left\langle e_{i},x\right\rangle =\sum_{j=1}^{d}x_{j}e_{i,j}=x_{i}$
+\end_inset
+
+ and since 
+\begin_inset Formula $x\in C_{d}$
+\end_inset
+
+ we know that 
+\begin_inset Formula $\left|x_{i}\right|\leq1\Rightarrow-1\leq x_{i}\leq1$
+\end_inset
+
+ .
+ So 
+\begin_inset Formula $\left\langle e_{i},x\right\rangle \geq-1$
+\end_inset
+
+ and so 
+\begin_inset Formula $C_{d}\subseteq H\left(e_{i},-1\right)$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $-e_{i}\in C_{d}$
+\end_inset
+
+ and since 
+\begin_inset Formula $\left\langle e_{i},-e_{i}\right\rangle =-1$
+\end_inset
+
+ we get that 
+\begin_inset Formula $L\left(e_{i},-1\right)\cap P\neq\emptyset$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Furthermore, let 
+\begin_inset Formula $x\in C_{d}$
+\end_inset
+
+ s.t 
+\begin_inset Formula $\left\langle e_{i},x\right\rangle =-1$
+\end_inset
+
+.
+ It is clear that x must be equal to
+\begin_inset Formula $-e_{i}$
+\end_inset
+
+ and so we have shown that 
+\begin_inset Formula $-e_{i}$
+\end_inset
+
+ is a vertex of 
+\begin_inset Formula $C_{d}$
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Taking the exact same steps we can show that 
+\begin_inset Formula $L\left(-e_{i},-1\right)=\{x\in\mathbb{R}^{d}:\left\langle -e_{i},x\right\rangle =-1\}$
+\end_inset
+
+ is a supporting hyper-plane of 
+\begin_inset Formula $C_{d}$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Let 
+\begin_inset Formula $x\in C_{d}$
+\end_inset
+
+ then 
+\begin_inset Formula $\left\langle -e_{i},x\right\rangle =-\sum_{j=1}^{d}x_{j}e_{i,j}=-x_{i}$
+\end_inset
+
+ and since 
+\begin_inset Formula $x\in C_{d}$
+\end_inset
+
+ we know that 
+\begin_inset Formula $\left|x_{i}\right|\leq1\Rightarrow-1\leq-x_{i}\leq1$
+\end_inset
+
+ .
+ So 
+\begin_inset Formula $\left\langle -e_{i},x\right\rangle \geq-1$
+\end_inset
+
+ and so 
+\begin_inset Formula $C_{d}\subseteq H\left(-e_{i},-1\right)$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $e_{i}\in C_{d}$
+\end_inset
+
+ and since 
+\begin_inset Formula $\left\langle -e_{i},e_{i}\right\rangle =-1$
+\end_inset
+
+ we get that 
+\begin_inset Formula $L\left(-e_{i},-1\right)\cap P\neq\emptyset$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Furthermore, let 
+\begin_inset Formula $x\in C_{d}$
+\end_inset
+
+ s.t 
+\begin_inset Formula $\left\langle -e_{i},x\right\rangle =-1$
+\end_inset
+
+.
+ It is clear that x must be equal to 
+\begin_inset Formula $e_{i}$
+\end_inset
+
+ and so we have shown that 
+\begin_inset Formula $e_{i}$
+\end_inset
+
+ is a vertex of 
+\begin_inset Formula $C_{d}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset Formula $C_{2}$
+\end_inset
+
+ drawing:
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{tikzpicture}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+tikzstyle {smallDot} = [ fill=red, circle, scale=0.5, thick]
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{axis}
+\end_layout
+
+\begin_layout Plain Layout
+
+[
+\end_layout
+
+\begin_layout Plain Layout
+
+	ymin=-1.5,
+\end_layout
+
+\begin_layout Plain Layout
+
+	ymax=1.5,
+\end_layout
+
+\begin_layout Plain Layout
+
+	xmin=-1.5,
+\end_layout
+
+\begin_layout Plain Layout
+
+	xmax=1.5
+\end_layout
+
+\begin_layout Plain Layout
+
+]
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+addplot [blue, line width = 1, smooth, domain=-1.0:0] {x + 1};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+addplot [blue, line width = 1, smooth, domain=0:1.0] {-x + 1};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+addplot [blue, line width = 1, smooth, domain=0:1.0] {x - 1};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+addplot [blue, line width = 1, smooth, domain=-1.0:0] {-x - 1};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node [smallDot, fill=brown, pin=-180:{(1,0)}] at (axis cs: 1,0) {};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node [smallDot, fill=green, pin=0:{(-1,0)}] at (axis cs: -1,0) {};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node [smallDot, fill=yellow, pin=-90:{(0,1)}] at (axis cs: 0,1) {};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+node [smallDot, fill=magenta, pin=90:{(0,-1)}] at (axis cs: 0,-1) {};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+addplot [yellow, dashed, width = 2] {1};
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+addplot [magenta, dashed, width = 2] {-1};
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+addplot[width = 2, dashed, green] coordinates {(-1,-1.5)(-1,1.5)}; 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+addplot[width = 2, dashed, brown] coordinates {(1,-1.5)(1,1.5)}; 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{axis}	
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzpicture}
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Let 
+\begin_inset Formula $H_{d}\subseteq\mathbb{R}^{d}$
+\end_inset
+
+ be the unit ball in 
+\begin_inset Formula $l_{\infty}$
+\end_inset
+
+ norm
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $H_{d}=\left\{ x\in\mathbb{R^{d}}:max\left\{ \left|x_{i}\right|:i\in[d]\right\} \leq1\right\} =\cap_{j=1}^{d}\left\{ x\in\mathbb{R^{d}}:-1\leq x_{i}\land x_{i}\leq1\right\} $
+\end_inset
+
+ 
+\begin_inset Newline newline
+\end_inset
+
+Therefore 
+\begin_inset Formula $H_{d}$
+\end_inset
+
+ is the intersection of d halfspaces and is bounded in all dimensions and
+ so it is a Polytope.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $S=\left\{ x\in\mathbb{R}^{d}:\,\forall i\in[d],\,x_{i}\in\{-1,1\}\right\} $
+\end_inset
+
+First let's show 
+\begin_inset Formula $H_{d}\subseteq conv(S)$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+We will prove by induction on the dimension d that the hypercube 
+\begin_inset Formula $H_{d}\subseteq conv(S_{d}),\,S_{d}=\left\{ x\in\mathbb{R}^{d}:\,\forall i\in[d],\,x_{i}\in\{-1,1\}\right\} $
+\end_inset
+
+:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Base: For d=1:
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $H_{1}=\left\{ x\in\mathbb{R}:\,\left|x\right|\leq1\right\} =[-1,1],\,S=\left\{ -1,1\right\} $
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+So 
+\begin_inset Formula $x\in H_{1}\,\Rightarrow\left|x\right|\leq1\Rightarrow$
+\end_inset
+
+ there exists 
+\begin_inset Formula $a_{1},a_{2}\in[0,1]$
+\end_inset
+
+ such that 
+\begin_inset Formula $a_{1}+a_{2}=1$
+\end_inset
+
+ and such that 
+\begin_inset Formula $x=a_{1}-a_{2}$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+\begin{cases}
+a_{1}=\frac{1+x}{2},a_{2}=\frac{1-x}{2} & x\geq0\\
+a_{1}=\frac{1-x}{2},a_{2}=\frac{1+x}{2} & x<0
+\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Step:
+\begin_inset space ~
+\end_inset
+
+Take 
+\begin_inset Formula $H_{d}$
+\end_inset
+
+ and transform it in the following way: given a vector 
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $x\in H_{d},x=[\begin{matrix}x_{1} & x_{2} & ... & x_{d}\end{matrix}]$
+\end_inset
+
+ get the vector : 
+\begin_inset Formula $y=[\begin{matrix}x_{1} & x_{2} & ... & x_{d-1}\end{matrix}]$
+\end_inset
+
+, denote the received set 
+\begin_inset Formula $H_{d-1}$
+\end_inset
+
+.
+ 
+\begin_inset Newline newline
+\end_inset
+
+This set is a hypercube of dimension d-1 because for all 
+\begin_inset Formula $x\in H_{d-1}$
+\end_inset
+
+ 
+\begin_inset Formula $\forall1\leq i\leq d-1\,\left|x_{i}\right|\leq1$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+By the induction assumption 
+\begin_inset Formula $H_{d-1}=conv(S_{d-1})$
+\end_inset
+
+ where 
+\begin_inset Formula $S_{d-1}=\left\{ x\in\mathbb{R}^{d-1}:\,\forall i\in[d-1],\,x_{i}\in\{-1,1\}\right\} $
+\end_inset
+
+ and so each vector in 
+\begin_inset Formula $H_{d-1}$
+\end_inset
+
+ is a convex combination of all 
+\begin_inset Formula $\pm1$
+\end_inset
+
+ vectors in 
+\begin_inset Formula $\mathbb{R}^{d-1}$
+\end_inset
+
+.
+\begin_inset Newline newline
+\end_inset
+
+Now, let 
+\begin_inset Formula $x\in H_{d}$
+\end_inset
+
+, 
+\begin_inset Formula $x=\left[\begin{matrix}x_{1} & x_{2} & ... & x_{d}\end{matrix}\right]$
+\end_inset
+
+ the vector 
+\begin_inset Formula $y=\left[\begin{matrix}x_{1} & x_{2} & ... & x_{d-1} & 1\end{matrix}\right]$
+\end_inset
+
+ can be expressed as a convex combination of
+\begin_inset Formula $\left\{ s\in S_{d}:\,s_{d}=1\right\} $
+\end_inset
+
+ because there exists a convex combination of 
+\begin_inset Formula $S_{d-1}$
+\end_inset
+
+ that gives 
+\begin_inset Formula $\left[\begin{matrix}x_{1} & x_{2} & ... & x_{d-1}\end{matrix}\right]$
+\end_inset
+
+ and the same coefficients, since their sum is 1, will give us 1 in the
+ d coordinate.
+\begin_inset Newline newline
+\end_inset
+
+In the same way, the vector 
+\begin_inset Formula $z=\left[\begin{matrix}x_{1} & x_{2} & ... & x_{d-1} & -1\end{matrix}\right]$
+\end_inset
+
+ can be expressed as a convex combination of
+\begin_inset Formula $\left\{ s\in S_{d}:\,s_{d}=-1\right\} $
+\end_inset
+
+ because there exists a convex combination of 
+\begin_inset Formula $S_{d-1}$
+\end_inset
+
+ that gives 
+\begin_inset Formula $\left[\begin{matrix}x_{1} & x_{2} & ... & x_{d-1}\end{matrix}\right]$
+\end_inset
+
+ and the same coefficients, since their sum is 1, will give us -1 in the
+ d coordinate.
+\begin_inset Newline newline
+\end_inset
+
+Now, x is a convex combination of y and z: 
+\begin_inset Formula $x=a_{1}y+a_{2}z,\,\,\begin{cases}
+a_{1}=\frac{1+x_{d}}{2},a_{2}=\frac{1-x_{d}}{2} & x_{d}\geq0\\
+a_{1}=\frac{1-x_{d}}{2},a_{2}=\frac{1+x_{d}}{2} & x_{d}<0
+\end{cases}$
+\end_inset
+
+ this is true since the sum of 
+\begin_inset Formula $a_{1},a_{2}$
+\end_inset
+
+ is 1 and y and z are equal for all coordinates other than d then for all
+ coordinates different than d, the convex combination 
+\begin_inset Formula $a_{1}y+a_{2}z$
+\end_inset
+
+ will give us the same value.
+\begin_inset Newline newline
+\end_inset
+
+For coordinate d this is easily checked.
+\begin_inset Newline newline
+\end_inset
+
+So x is a convex combination of two vectors in 
+\begin_inset Formula $\mathbb{R}^{d}$
+\end_inset
+
+ one which is a convex combination of 
+\begin_inset Formula $\pm1$
+\end_inset
+
+ vectors where the d coordinate is 1 and the other which is a convex combination
+ of 
+\begin_inset Formula $\pm1$
+\end_inset
+
+ vectors where the d coordinate is -1, therefore x is a convex combination
+ of 
+\begin_inset Formula $\pm1$
+\end_inset
+
+ vectors where the d coordinate is 1 and 
+\begin_inset Formula $\pm1$
+\end_inset
+
+ vectors where the d coordinate is -1 or simply all the
+\begin_inset Formula $\pm1$
+\end_inset
+
+ vectors in 
+\begin_inset Formula $\mathbb{R}^{d}$
+\end_inset
+
+.
+ so 
+\begin_inset Formula 
+\[
+x\in conv(S_{d})
+\]
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Now let's show that 
+\begin_inset Formula $conv(S)\subseteq H_{d}$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Let 
+\begin_inset Formula $x\in conv(S)$
+\end_inset
+
+, then x is equal to some convex combination of 
+\begin_inset Formula $\pm1$
+\end_inset
+
+ vectors, let the coefficients of this convex combination be 
+\begin_inset Formula $\alpha_{1},...,\alpha_{n}$
+\end_inset
+
+ 
+\begin_inset Newline newline
+\end_inset
+
+Such that
+\begin_inset Formula 
+\[
+\sum_{i=1}^{n}\alpha_{i}=1
+\]
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Now let's consider some coordinate of x : 
+\begin_inset Formula $x_{j}=\sum_{i=1}^{n}\alpha_{i}a_{i}$
+\end_inset
+
+ where 
+\begin_inset Formula $a_{i}$
+\end_inset
+
+ is a 
+\begin_inset Formula $\pm1$
+\end_inset
+
+ vector in 
+\begin_inset Formula $\mathbb{R}^{n}.$
+\end_inset
+
+ 
+\begin_inset Formula 
+\[
+\left|x_{j}\right|=\left|\sum_{i=1}^{n}\alpha_{i}a_{i}\right|\leq\sum_{i=1}^{n}\left|\alpha_{i}a_{i}\right|=\sum_{i=1}^{n}\alpha_{i}\left|a_{i}\right|=\sum_{i=1}^{n}\alpha_{i}=1
+\]
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+This is true for every coordinate of the vector x and so 
+\begin_inset Formula $\left\Vert x\right\Vert _{\infty}\leq1$
+\end_inset
+
+ so 
+\begin_inset Formula $x\in H_{d}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Claim : The set of vertices of 
+\begin_inset Formula $H_{d}$
+\end_inset
+
+ are 
+\begin_inset Formula $V=\{x\in\mathbb{R}^{d}:\,\,1\leq i\leq d\,\,x_{i}\in\{1,-1\}\}$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Proof: Let 
+\begin_inset Formula $v\in V$
+\end_inset
+
+, let us consider the hyperplane 
+\begin_inset Formula $L(v,d)=\left\{ x\in\mathbb{R}^{d}:\left\langle v,x\right\rangle =d\right\} $
+\end_inset
+
+.
+ First let's show that this is a supporting hyperplane of 
+\begin_inset Formula $H_{d}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Let 
+\begin_inset Formula $x\in H_{d}$
+\end_inset
+
+ then 
+\begin_inset Formula $\left\langle x,v\right\rangle =\sum_{i=1}^{d}x_{i}v_{i}\leq\sum_{i=1}^{d}\left|x_{i}v_{i}\right|=\sum_{i=1}^{d}\left|x_{i}\right|\left|v_{i}\right|\underset{\left|x_{i}\right|\leq1,\left|v_{i}\right|=1}{\leq}\sum_{i=1}^{d}1=d$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\left\langle v,v\right\rangle =d$
+\end_inset
+
+, which means 
+\begin_inset Formula $L(v,d)\cap H_{d}\neq\emptyset$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+FInally let's show that for 
+\begin_inset Formula $x\in H_{d}$
+\end_inset
+
+ if 
+\begin_inset Formula $\left\langle v,x\right\rangle =d\,\Rightarrow x=v$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+\left\langle x,v\right\rangle =\sum_{i=1}^{d}x_{i}v_{i}=d
+\]
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+We have d terms in the sum and the sum is equal to d, each term in the sum
+ is at most equal to 1 and therefore all terms in the sum must be equal
+ to 1.
+ So x=v.
+\begin_inset Newline newline
+\end_inset
+
+This means that 
+\begin_inset Formula $L(v,d)\cap H_{d}=v$
+\end_inset
+
+ and so v is a vertex of 
+\begin_inset Formula $H_{d}.$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\triangle_{d}\subseteq\mathbb{R}^{d+1}=\left\{ x\in\left[0,1\right]^{d+1}:\sum_{i=1}^{d+1}x_{i}=1\right\} $
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $\triangle_{d}=\left\{ x\in\mathbb{R}^{d+1}:\forall i\in[d+1],\,\,0\leq x_{i}\leq1,\sum_{i=1}^{d+1}x_{i}=1\right\} $
+\end_inset
+
+ So 
+\begin_inset Formula $\triangle_{d}$
+\end_inset
+
+ is a set of 
+\begin_inset Formula $x\in\mathbb{R}^{d+1}$
+\end_inset
+
+ which satisfies a finite set of equalities and inequalities and is bounded
+ in all coordinates.
+ By the definition we saw in class this is a Polytope.
+\end_layout
+
+\begin_layout Enumerate
+Claim
+\begin_inset Formula $\triangle_{d}$
+\end_inset
+
+'s vertices 
+\begin_inset Formula $V=\{e_{1},...,e_{d},e_{d+1}\}$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Let 
+\begin_inset Formula $e_{i}\in V$
+\end_inset
+
+ let's consider the hyperplane : 
+\begin_inset Formula $L(v,d)=\left\{ x\in\mathbb{R}^{d+1}:\left\langle e_{i},x\right\rangle =1\right\} $
+\end_inset
+
+, this is a supporting hyperplane of 
+\begin_inset Formula $\triangle_{d}$
+\end_inset
+
+ since:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Let 
+\begin_inset Formula $x\in\triangle_{d}$
+\end_inset
+
+ then 
+\begin_inset Formula $\left\langle x,e_{i}\right\rangle =x_{i}\underset{x\in\triangle_{d}}{\leq}1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $e_{i}\in\triangle_{d}$
+\end_inset
+
+, 
+\begin_inset Formula $\left\langle e_{i},e_{i}\right\rangle =\sum_{i=1}^{d+1}e_{i}e_{i}=1\Rightarrow\triangle_{d}\cap L(v,d)\neq\emptyset$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Finally 
+\begin_inset Formula $x\in\triangle_{d},\,\,\left\langle x,e_{i}\right\rangle =1\Rightarrow\sum_{i=1}^{d+1}x_{i}e_{i}=x_{i}=1\Rightarrow x_{i}=1$
+\end_inset
+
+ and since 
+\begin_inset Formula $\sum_{i=1}^{d+1}x_{i}=1\Rightarrow\forall j\in[d+1],\,j\neq i\,\,x_{j}=0$
+\end_inset
+
+ and so
+\begin_inset Formula 
+\[
+x=v
+\]
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+So 
+\begin_inset Formula $L(v,d)\cap\triangle_{d}=v$
+\end_inset
+
+ and so v is a vertex 
+\begin_inset Formula $\triangle_{d}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+First let's show that 
+\begin_inset Formula $\triangle_{d}\subseteq conv(V)$
+\end_inset
+
+:
+\begin_inset Newline newline
+\end_inset
+
+Let 
+\begin_inset Formula $x\in\triangle_{d}$
+\end_inset
+
+ 
+\begin_inset Formula $x=\sum_{i=1}^{d}x_{i}e_{i}$
+\end_inset
+
+ and this is exactly the convex combination of V that is equal to x, since
+ 
+\begin_inset Formula $0\leq x_{i}\leq1,\,\sum_{i=1}^{d+1}x_{i}=1$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Now let's show that 
+\begin_inset Formula $conv(V)\subseteq\triangle_{d}$
+\end_inset
+
+:
+\begin_inset Newline newline
+\end_inset
+
+Let 
+\begin_inset Formula $v\in conv(V)$
+\end_inset
+
+ so 
+\begin_inset Formula $v=\sum_{i=1}^{d+1}v_{i}e_{i}$
+\end_inset
+
+ where 
+\begin_inset Formula $\sum_{i=1}^{d+1}v_{i}=1,\,\,0\leq v_{i}\leq1$
+\end_inset
+
+, and this is by defintion of 
+\begin_inset Formula $\triangle_{d}$
+\end_inset
+
+ means that 
+\begin_inset Formula $v\in\triangle_{d}$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset Formula $x_{1},...x_{t}\mathbb{R}^{d}$
+\end_inset
+
+ and let 
+\begin_inset Formula $P=conv\left(\left\{ x_{1},...,x_{t}\right\} \right)$
+\end_inset
+
+.
+ Let 
+\begin_inset Formula $f:\mathbb{R}^{d}\longrightarrow\mathbb{R}$
+\end_inset
+
+, 
+\begin_inset Formula $c\in\mathbb{R}^{d},\,f(x)=\left\langle c,x\right\rangle $
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+let 
+\begin_inset Formula $x\in P,\,\,\,x=\sum_{i=1}^{t}a_{i}x_{i},\,\,\,a_{i}\in[0,1],\,\,\,\sum_{i=1}^{t}a_{i}=1$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $f(x)=\left\langle c,x\right\rangle =\left\langle c,\left(\sum_{i=1}^{t}a_{i}x_{i}\right)\right\rangle =\sum_{i=1}^{t}a_{i}\left\langle c,x_{i}\right\rangle $
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula $max_{x\in P}f(x)=\underset{x\in P}{max}\sum_{i=1}^{t}a_{i}\left\langle c,x_{i}\right\rangle $
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+To maximize this sum we must choose what weights to give each inner product
+ of a vertex with c.
+\begin_inset Newline newline
+\end_inset
+
+The solution is to take the maximal such inner product and to give it the
+ maximal weight, i.e 1, therefore
+\begin_inset Formula 
+\[
+max_{x\in P}f(x)=\underset{x\in P}{max}\sum_{i=1}^{t}a_{i}\left\langle c,x_{i}\right\rangle =\underset{i=1,...,t}{max}\left\langle c,x_{i}\right\rangle =\underset{i=1,...,t}{max}f\left(x_{i}\right)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Max 3x - y
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Feasible Solutions:
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Graphics
+	filename /home/or/Desktop/q5_a.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\underset{}{max}\,3x-y$
+\end_inset
+
+ on the feasible set will be received on one of the politope's vertices,
+ let's compute the objective function on each:
+\begin_inset Formula 
+\[
+f\left(\left[\begin{matrix}0\\
+0
+\end{matrix}\right]\right)=0,f\left(\left[\begin{matrix}1\\
+1
+\end{matrix}\right]\right)=2,f\left(\left[\begin{matrix}2\\
+1
+\end{matrix}\right]\right)=5,f\left(\left[\begin{matrix}3\\
+0
+\end{matrix}\right]\right)=9,f\left(\left[\begin{matrix}2\\
+-1
+\end{matrix}\right]\right)=7,f\left(\left[\begin{matrix}1\\
+-1
+\end{matrix}\right]\right)=4
+\]
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Therefore 
+\begin_inset Formula $\underset{}{max}\,3x-y$
+\end_inset
+
+=9
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\begin{array}{cc}
+max & 3x-y\\
+ & x+y\le3\\
+ & x-y\le3\\
+s.t & -y\le1\\
+ & y\le1\\
+ & x+y\ge0\\
+ & x-y\ge0
+\end{array}$
+\end_inset
+
+
+\begin_inset Formula $\Leftrightarrow\begin{array}{cc}
+max & 3x-y\\
+ & -x-y=-3+z_{1}\\
+ & y-x=-3+z_{2}\\
+s.t & y=-1+z_{3}\\
+ & -y=-1+z_{4}\\
+ & x+y=z_{5}\\
+ & x-y=z_{6}\\
+ & z_{1},...,z_{6}\geq0
+\end{array}$
+\end_inset
+
+
+\begin_inset Formula $\Leftrightarrow\begin{array}{cc}
+max & 3x-y\\
+ & -x-y=-3+z_{1}\\
+ & y-x=-3+z_{2}\\
+s.t & y=-1+z_{3}\\
+ & -y=-1+z_{4}\\
+ & x+y=z_{5}\\
+ & x-y=z_{6}
+\end{array}$
+\end_inset
+
+
+\begin_inset Formula $\Leftrightarrow\begin{array}{cc}
+max & \left[\begin{matrix}3 & -1 & 0 & 0 & 0 & 0\end{matrix}\right]\cdot\left[\begin{matrix}x\\
+y\\
+z_{1}\\
+z_{2}\\
+z_{3}\\
+z_{4}\\
+z_{5}\\
+z_{6}
+\end{matrix}\right]\\
+\\
+s.t. & \left[\begin{matrix}-1 & -1 & -1\\
+-1 & 1 & -1\\
+0 & 1 & -1\\
+0 & -1 & -1\\
+1 & 1 & -1\\
+1 & -1 & -1
+\end{matrix}\right]\left[\begin{matrix}x\\
+y\\
+z_{1}\\
+z_{2}\\
+z_{3}\\
+z_{4}\\
+z_{5}\\
+z_{6}
+\end{matrix}\right]=\left[\begin{matrix}-3\\
+-3\\
+-1\\
+-1\\
+0\\
+0
+\end{matrix}\right]\\
+ & z_{1},...,z_{6}\geq0
+\end{array}$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_body
+\end_document

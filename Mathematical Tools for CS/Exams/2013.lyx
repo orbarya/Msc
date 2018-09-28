@@ -1,0 +1,234 @@
+#LyX 2.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 508
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language hebrew
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2cm
+\rightmargin 2cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\norm}[1]{\Vert#1\Vert}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\norn}[2]{\Vert#1\Vert_{#2}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Title
+
+\lang english
+Test 2013
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+שאלה 
+\numeric on
+1
+\numeric off
+.
+\end_layout
+
+\begin_layout Standard
+א.
+ נניח כי 
+\begin_inset Formula $S\subseteq\left[n\right]$
+\end_inset
+
+.
+ מתקיים כי:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+\forall j & \in\left[n\right],\,\Pr\left[X_{j}=1\wedge j\in S\right]=\Pr\left[X_{j}=1\right]\cdot\Pr\left[j\in S\right]\\
+ & \leq\alpha q
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+שאלה
+\family roman
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+2
+\numeric off
+.
+\end_layout
+
+\begin_layout Standard
+א.
+ לכל קודקוד 
+\begin_inset Formula $i\in\left[n\right]$
+\end_inset
+
+ נגדיר מ"מ 
+\begin_inset Formula $X_{i}$
+\end_inset
+
+ ע"ׁי:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+X_{i}=\begin{cases}
+1 & \deg\left(i\right)\geq k\left(n\right)\\
+0 & \text{else}
+\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+מתקיים כי:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\Pr\left[X_{i}=1\right]=\left(\frac{1}{n}\right)^{k\left(n\right)}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+כעת,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+\mathbb{E}\left[X\right] & =\binom{n}{2}\left(\frac{1}{n}\right)^{k\left(n\right)}\\
+ & =\frac{n\left(n-1\right)}{2}\left(\frac{1}{n}\right)^{k\left(n\right)}\\
+ & =\frac{n\left(n-1\right)}{2}\left(\frac{1}{n}\right)^{k\left(n\right)}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+\log\left(\mathbb{E}\left[X\right]\right) & =\log\left(\frac{n\left(n-1\right)}{2}\left(\frac{1}{n}\right)^{k\left(n\right)}\right)\\
+ & =\log\left(\frac{n\left(n-1\right)}{2}\right)+\log\left(\left(\frac{1}{n}\right)^{k\left(n\right)}\right)\\
+ & =\log\left(\frac{n\left(n-1\right)}{2}\right)+\frac{c\log\left(n\right)}{\log\left(\log\left(n\right)\right)}\log\left(\frac{1}{n}\right)
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
